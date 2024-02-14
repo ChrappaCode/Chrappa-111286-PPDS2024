@@ -1,1 +1,5 @@
-# Chrappa-111286-PPDS2024
+# PPDS Repository (Predmet: Paralelné a distribuované systémy)
+
+## Author
+- Bc. Jakub Chrappa
+- Email: xchrappaj@stuba.sk
