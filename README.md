@@ -1,5 +1,5 @@
-# PPDS Repository (Predmet: Paralelné a distribuované systémy)
+# PPDS Repozitár (Predmet: Paralelné programovanie a distribuované systémy)
 
-## Author
+## Autor
 - Bc. Jakub Chrappa
 - Email: xchrappaj@stuba.sk
