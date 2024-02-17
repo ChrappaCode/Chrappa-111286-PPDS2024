@@ -77,3 +77,16 @@ Výpis - Fero sa naraňajkoval:
 Výpis - Kompletný výpis:
 
 ![](/img/komplet_vypis_2sem.png)
+
+### Zdroje využité pri tvorbe zdrojových kódov a dokumentácie
+
+*[Markdown Guide](https://www.markdownguide.org)*.
+
+*[Prednáška 1](https://elearn.elf.stuba.sk/moodle/pluginfile.php/76973/mod_resource/content/1/2024-01.uvod_do_paralelnych_a_distribuovanych_vypoctov.pdf)*.
+
+*[Seminár 1 (zdrojové kódy)](https://github.com/tj314/ppds-seminars/tree/ppds2024/seminar1)*.
+
+*Seminár 1 PDF*
+
+*[ChatGPT](https://chat.openai.com/)*.
+
