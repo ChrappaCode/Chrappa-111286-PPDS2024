@@ -44,7 +44,7 @@ Výpis - Fero sa naraňajkoval:
 
 Výpis - Kompletný výpis:
 
-![](/img/kompet_vypis_1sem.png)
+![](/img/komplet_vypis_1sem.png)
 
 ## 2semafory
 
@@ -76,4 +76,4 @@ Výpis - Fero sa naraňajkoval:
 
 Výpis - Kompletný výpis:
 
-![](/img/kompet_vypis_2sem.png)
+![](/img/komplet_vypis_2sem.png)
