@@ -14,7 +14,7 @@ Tento kód obsahuje vypracovanie problému použitím jedného semafóra. Jednod
 
 Ukážka simulácie *rannej hygieny*: 
 
-//Obrázok kódu
+//![GitHub Logo](/images/logo.png)
 
 Podobne simuluje aj zvyšné úkony.
 
@@ -22,7 +22,7 @@ Následne sme vytvorili dve vlákna a im príslušné funkcie v ktorých tieto s
 
 Po spustení programu vidíme v konzole nasledujúce výpisy: 
 
-//Obrázky
+//![GitHub Logo](/images/logo.png)
 
 ## 2semafory
 
@@ -32,4 +32,4 @@ Aj toto vypracovanie ako aj prvé rieši problém "**kto jedol prvý**". Využit
 
 Po spustení programu vidíme v konzole nasledujúce výpisy (rovnaké ako v prvom vypracovaní): 
 
-//Obrázky
+//![GitHub Logo](/images/logo.png)
