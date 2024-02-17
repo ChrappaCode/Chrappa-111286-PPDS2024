@@ -78,7 +78,7 @@ Výpis - Kompletný výpis:
 
 ![](/img/komplet_vypis_2sem.png)
 
-### Zdroje využité pri tvorbe zdrojových kódov a dokumentácie
+## Zdroje využité pri tvorbe zdrojových kódov a dokumentácie
 
 *[Markdown Guide](https://www.markdownguide.org)*
 
