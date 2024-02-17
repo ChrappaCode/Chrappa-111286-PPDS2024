@@ -30,6 +30,6 @@ Tento kód obsahuje vypracovanie problému použitím dvoch semafórov, jedného
 
 Aj toto vypracovanie ako aj prvé rieši problém "**kto jedol prvý**". Využitím druhého semafora som sa snažil sprehladniť riešenie a zabezpečiť aby `Jano` aj `Fero` začali naraz spať aj umývať sa, následne sa `Jano` naraňajkuje, zavolá `Ferovi`, `Fero` hovor príjme a naraňajkuje sa tiež.
 
-Po spustení programu vidíme v konzole nasledujúce výpisy: 
+Po spustení programu vidíme v konzole nasledujúce výpisy (rovnaké ako v prvom vypracovaní): 
 
 //Obrázky
