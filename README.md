@@ -14,15 +14,37 @@ Tento kód obsahuje vypracovanie problému použitím jedného semafóra. Jednod
 
 Ukážka simulácie *rannej hygieny*: 
 
-//![GitHub Logo](/images/logo.png)
+![Ukážka simulácie hygieny](/img/hygiena.png)
 
 Podobne simuluje aj zvyšné úkony.
 
 Následne sme vytvorili dve vlákna a im príslušné funkcie v ktorých tieto simulácie voláme s tým, že pomocou semafora sme zabezpečili aby sa vlákno 1 (`Jano`) raňajkovalo skôr. Jednoducho vysvetlené vlákno 2 (`Fero`) čaká na `signal()` od vlákna 1 (`Jano`), ktorý mu dá najavo že môže ísť řanajkovať. V kóde je tento `signal()` reprezentovaný telefonátom medzi `Janom` a `Ferov`.  
 
-Po spustení programu vidíme v konzole nasledujúce výpisy: 
+Po spustení programu vidíme v konzole nasledujúce výpisy (medzi výpismi je krátka pauza simulujúca dlhšie vykonávanie úkonu): 
 
-//![Ukážka simulácie hygieny](/img/hygiena.png)
+Výpis - spánok (obaja naraz):
+
+![](/img/spanok_vypis.png)
+
+Výpis - ranná hygiena (obaja naraz):
+
+![](/img/hygiena_vypis.png)
+
+Výpis - Jano sa naraňajkoval:
+
+![](/img/jano_je.png)
+
+Výpis - Jano volá Ferovi a Fero prijíma hovor:
+
+![](/img/telefonat.png)
+
+Výpis - Fero sa naraňajkoval:
+
+![](/img/fero_je.png)
+
+Výpis - Kompletný výpis:
+
+![](/img/komplet_vypis_1sem.png)
 
 ## 2semafory
 
@@ -32,4 +54,26 @@ Aj toto vypracovanie ako aj prvé rieši problém "**kto jedol prvý**". Využit
 
 Po spustení programu vidíme v konzole nasledujúce výpisy (rovnaké ako v prvom vypracovaní): 
 
-//![GitHub Logo](/images/logo.png)
+Výpis - spánok (obaja naraz):
+
+![](/img/spanok_vypis.png)
+
+Výpis - ranná hygiena (obaja naraz):
+
+![](/img/hygiena_vypis.png)
+
+Výpis - Jano sa naraňajkoval:
+
+![](/img/jano_je.png)
+
+Výpis - Jano volá Ferovi a Fero prijíma hovor:
+
+![](/img/telefonat.png)
+
+Výpis - Fero sa naraňajkoval:
+
+![](/img/fero_je.png)
+
+Výpis - Kompletný výpis:
+
+![](/img/komplet_vypis_2sem.png)
