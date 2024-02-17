@@ -22,7 +22,7 @@ Následne sme vytvorili dve vlákna a im príslušné funkcie v ktorých tieto s
 
 Po spustení programu vidíme v konzole nasledujúce výpisy: 
 
-//![GitHub Logo](/images/logo.png)
+//![Ukážka simulácie hygieny](/img/hygiena.png)
 
 ## 2semafory
 
