@@ -18,7 +18,7 @@ Ukážka simulácie *rannej hygieny*:
 
 Podobne simuluje aj zvyšné úkony.
 
-Následne sme vytvorili dve vlákna a im príslušné funkcie v ktorých tieto simulácie voláme s tým, že pomocou semafora sme zabezpečili aby sa vlákno 1 (`Jano`) raňajkovalo skôr. Jednoducho vysvetlené vlákno 2 (`Fero`) čaká na `signal()` od vlákna 1 (`Jano`), ktorý mu dá najavo že môže ísť řanajkovať. Vo výpise je tento `signal()` reprezentovaný telefonátom medzi `Janom` a `Ferom`.  
+Následne sme vytvorili dve vlákna a im príslušné funkcie v ktorých tieto simulácie voláme s tým, že pomocou semafora sme zabezpečili aby sa vlákno 1 (`Jano`) raňajkovalo skôr. Jednoducho vysvetlené vlákno 2 (`Fero`) čaká na `semafor.signal()` od vlákna 1 (`Jano`), ktorý mu dá najavo že môže ísť řanajkovať. Semafor je inicializovaný na hodnotu 0 čiže na prvom `semafor.wait()` bude vlákno čakať na `semafor.signal()`. Vo výpise je tento `semafor.signal()` reprezentovaný telefonátom medzi `Janom` a `Ferom`.
 
 Po spustení programu vidíme v konzole nasledujúce výpisy (medzi výpismi je krátka pauza simulujúca dlhšie vykonávanie úkonu): 
 
