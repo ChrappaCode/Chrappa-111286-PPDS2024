@@ -60,7 +60,6 @@ def jano(shared):
     """
     spi(1)
     umyva_sa(1)
-    #sleep(0.1)  # z dôvodu ak by nebol nikde inde (vo funckiach) iný sleep (Jano by vždy jedol skôr ale pre vizualizáciu výstupov krajšie)
     ranajkuje(1)  # Jano sa naje
     print("Janko volá Ferkovi nech začne chalovať")
     sleep(1)  # simuluje dlhšie trvanie úkonu
