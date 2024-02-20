@@ -56,39 +56,41 @@ def umyva_sa(osoba):
         print("Ferko sa umýva (naraz)")
         sleep(1)  # simuluje dlhšie trvanie úkonu
 
-def jano(shared):
+def jano(shared, idVlakno):
     """
     Táto funkcia simuluje Janove ráno
     :param shared: Zdielané data o semaforoch
+    :param idVlakno: Id vlákna
     """
-    spi(1, shared)
+    spi(idVlakno, shared)
     shared.sem_jano.wait()  # Z dôvodu aby začali umývanie spolu naraz (teoreticky nepotrebné ale pre vizualizáciu krajšie)
-    umyva_sa(1)
-    ranajkuje(1)  # Jano sa naje
+    umyva_sa(idVlakno)
+    ranajkuje(idVlakno)  # Jano sa naje
     print("Janko volá Ferkovi nech začne chalovať")
     sleep(1)  # simuluje dlhšie trvanie úkonu
     shared.sem_fero.signal()  # Signal pre Fera aby išiel jesť
 
-def fero(shared):
+def fero(shared, idVlakno):
     """
     Táto funkcia simuluje Ferove ráno
     :param object shared: Zdielané data o semaforch
+    :param idVlakno: Id vlákna
     """
-    spi(2, shared)  # Fero spí
+    spi(idVlakno, shared)  # Fero spí
     shared.sem_fero.wait()  # Z dôvodu aby začali umývanie spolu naraz (teoreticky nepotrebné ale pre vizualizáciu krajšie)
-    umyva_sa(2)  # Fero sa umýva
+    umyva_sa(idVlakno)  # Fero sa umýva
     shared.sem_fero.wait()  # Čaká na Jana nech sa prvý naje
     print("Ferko prijal hovor a ide na chálku")
     sleep(1)  # simuluje dlhšie trvanie úkonu
-    ranajkuje(2)  # Fero sa naje
+    ranajkuje(idVlakno)  # Fero sa naje
 
 def main():
     """Táto funkcia vytvára zdielaný objekt a vlákna pre Jana a Fera"""
 
     shared = Shared(0, 0)  # inicializácia zdielaných semaforov
 
-    jano_vlakno = Thread(jano, shared)  # vlákno 1 reprezentuje Jana
-    fero_vlakno = Thread(fero, shared)  # vlákno 2 reprezentuje Fera
+    jano_vlakno = Thread(jano, shared, 1)  # vlákno 1 reprezentuje Jana
+    fero_vlakno = Thread(fero, shared, 2)  # vlákno 2 reprezentuje Fera
 
     jano_vlakno.join()
     fero_vlakno.join()
