@@ -6,7 +6,7 @@ Táto vetva obsahuje zdrojové kódy ku **zadaniu 1** z PPDS.
 
 Problém "**kto jedol prvý**" spočíva v tom, že simulujeme bežné úkony tj. *spánok*, *ranná hygiena*, *telefonát* a *raňajkovanie*. Hlavnou premisou zadania je zabezpečenie aby `Jano` raňajkoval skôr ako `Fero`, tj. aby vlákno 1 vykonalo tento úkon skôr ako vlákno 2.
 
-Na zabezpečenie požadovaného správania je možné použiť niekoľko techník. V mojom vypracovaní som sa zameral hlavne na triedu `Semaphore` z knižnice [fei.ppds](https://pypi.org/project/fei.ppds/), ktorú som použil vo vypracovaní [1semafor](1semafor.py) a [2semafory](2semafory.py).
+Na zabezpečenie požadovaného správania je možné použiť niekoľko techník. V mojom vypracovaní som sa zameral hlavne na triedu `Semaphore` z knižnice [fei.ppds](https://pypi.org/project/fei.ppds/), ktorú som použil vo vypracovaní [1semafor](1semafor.py) a [2semafory](2semafory.py). Pri testovaní riešenia sme využili Python interpreter `3.12`.
 
 ## 1semafor
 
@@ -18,7 +18,7 @@ Ukážka simulácie *rannej hygieny*:
 
 Podobne simuluje aj zvyšné úkony.
 
-Následne sme vytvorili dve vlákna a im príslušné funkcie v ktorých tieto simulácie voláme s tým, že pomocou semafora sme zabezpečili aby sa vlákno 1 (`Jano`) raňajkovalo skôr. Jednoducho vysvetlené vlákno 2 (`Fero`) čaká na `signal()` od vlákna 1 (`Jano`), ktorý mu dá najavo že môže ísť řanajkovať. V kóde je tento `signal()` reprezentovaný telefonátom medzi `Janom` a `Ferov`.  
+Následne sme vytvorili dve vlákna a im príslušné funkcie v ktorých tieto simulácie voláme s tým, že pomocou semafora sme zabezpečili aby sa vlákno 1 (`Jano`) raňajkovalo skôr. Jednoducho vysvetlené vlákno 2 (`Fero`) čaká na `semafor.signal()` od vlákna 1 (`Jano`), ktorý mu dá najavo že môže ísť řanajkovať. Semafor je inicializovaný na hodnotu 0 čiže na prvom `semafor.wait()` bude vlákno čakať na `semafor.signal()`. Vo výpise je tento `semafor.signal()` reprezentovaný telefonátom medzi `Janom` a `Ferom`.
 
 Po spustení programu vidíme v konzole nasledujúce výpisy (medzi výpismi je krátka pauza simulujúca dlhšie vykonávanie úkonu): 
 
@@ -77,3 +77,16 @@ Výpis - Fero sa naraňajkoval:
 Výpis - Kompletný výpis:
 
 ![](/img/komplet_vypis_2sem.png)
+
+## Zdroje využité pri tvorbe zdrojových kódov a dokumentácie
+
+*[Markdown Guide](https://www.markdownguide.org)*
+
+*[Prednáška 1](https://elearn.elf.stuba.sk/moodle/pluginfile.php/76973/mod_resource/content/1/2024-01.uvod_do_paralelnych_a_distribuovanych_vypoctov.pdf)*
+
+*[Seminár 1 (zdrojové kódy)](https://github.com/tj314/ppds-seminars/tree/ppds2024/seminar1)*
+
+*Seminár 1 PDF*
+
+*[ChatGPT](https://chat.openai.com/)*
+
