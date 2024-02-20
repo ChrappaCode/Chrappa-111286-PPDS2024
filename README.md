@@ -8,7 +8,7 @@ Problém "**kto jedol prvý**" spočíva v tom, že simulujeme bežné úkony tj
 
 Na zabezpečenie požadovaného správania je možné použiť niekoľko techník. V mojom vypracovaní som sa zameral hlavne na triedu `Semaphore` z knižnice [fei.ppds](https://pypi.org/project/fei.ppds/), ktorú som použil vo vypracovaní [1semafor](1semafor.py) a [2semafory](2semafory.py). Pri testovaní riešenia sme využili Python interpreter `3.12`.
 
-## 1semafor
+## 1semafor (optimálne riešenie)
 
 Tento kód obsahuje vypracovanie problému použitím jedného semafóra. Jednoducho simuluje úkony spomenuté vyššie, pomocou funkcie `sleep()` simulujeme dlhšie trvanie úkonu.
 
