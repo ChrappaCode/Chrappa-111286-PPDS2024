@@ -1,5 +1,6 @@
-# PPDS Repozitár (Predmet: Paralelné programovanie a distribuované systémy)
+# Zadanie 01 
 
-## Autor
-- Bc. Jakub Chrappa
-- Email: xchrappaj@stuba.sk
+Táto vetva obsahuje zdrojové kódy ku **zadaniu 2** z PPDS.
+
+Úlohou zadania je vyriešenie problému hodujúcich divochov.
+
