@@ -1,4 +1,4 @@
-# Zadanie 01 
+# Zadanie 02
 
 Táto vetva obsahuje zdrojové kódy ku **zadaniu 2** z PPDS.
 
