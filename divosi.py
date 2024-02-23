@@ -2,7 +2,7 @@ __authors__ = "Jakub Chrappa"
 __email__ = "xchrappaj@stuba.sk"
 
 
-from fei.ppds import Mutex, Thread, Semaphore
+from fei.ppds import Mutex, Thread, Semaphore, print
 from time import sleep
 from random import randint
 
@@ -34,6 +34,15 @@ def vypis_ze_su_tu_vsetci(i):
 def divochJe(i, shared):
 
     while True:
+        #shared.barier2Mutex.lock()
+        #shared.pocitadlo2 += 1
+        #print(f"Divočák {i} prišiel a čaká na ostatných. Je nás tu: {shared.pocitadlo1}")
+        #if shared.pocitadlo2 == N:
+        #    shared.pocitadlo2 = 0
+        #    shared.bariera2.signal(N)
+        #shared.barier2Mutex.unlock()
+        #shared.bariera2.wait()
+
         shared.barierMutex.lock()
         shared.pocitadlo1 += 1
         print(f"Divočák {i} prišiel a čaká na ostatných. Je nás tu: {shared.pocitadlo1}")
@@ -46,24 +55,26 @@ def divochJe(i, shared):
         sleep(1)
 
         shared.mutex.lock()
-        sleep(0.5)
+        #sleep(0.5)
         print(f"Divočák {i} si prišiel dať porciu")
-        sleep(0.5)
+        #sleep(0.5)
         if shared.hrniec == 0:
             print(f"Divočák {i} hlásy kuchárovi, že došlo jedlo")
             shared.kucharVar.signal()
             shared.kucharDovar.wait()
         print(f"Divočák {i} si zobral porciu")
-        sleep(0.5)
+        #sleep(0.5)
         shared.hrniec = shared.hrniec - 1
         print(f"V hrnci je ešte : {shared.hrniec} porcií")
-        sleep(0.5)
+        #sleep(0.5)
         shared.mutex.unlock()
 
         print(f"Divočák {i} hoduje")
-        sleep(1)
+        #sleep(1)
         print(f"Divočák {i} ide na lov")
-        sleep(30)
+
+
+        #sleep(30)
 
 
 def varenie(shared):
@@ -74,7 +85,7 @@ def varenie(shared):
     while True:
         shared.kucharVar.wait()  # kuchár čaká kým mu divoch dá signál že je hrniec prázdny
         print("Kuchar varí jedlo pre divočákov")
-        sleep(2)  # simuluje dlhšie trvanie úkonu
+        #sleep(2)  # simuluje dlhšie trvanie úkonu
         shared.hrniec = 10  # navarí plný hrniec
         shared.kucharDovar.signal()
 
