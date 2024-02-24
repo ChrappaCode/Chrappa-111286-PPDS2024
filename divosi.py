@@ -34,14 +34,14 @@ def vypis_ze_su_tu_vsetci(i):
 def divochJe(i, shared):
 
     while True:
-        #shared.barier2Mutex.lock()
-        #shared.pocitadlo2 += 1
+        shared.barier2Mutex.lock()
+        shared.pocitadlo2 += 1
         #print(f"Divočák {i} prišiel a čaká na ostatných. Je nás tu: {shared.pocitadlo1}")
-        #if shared.pocitadlo2 == N:
-        #    shared.pocitadlo2 = 0
-        #    shared.bariera2.signal(N)
-        #shared.barier2Mutex.unlock()
-        #shared.bariera2.wait()
+        if shared.pocitadlo2 == N:
+            shared.pocitadlo2 = 0
+            shared.bariera2.signal(N)
+        shared.barier2Mutex.unlock()
+        shared.bariera2.wait()
 
         shared.barierMutex.lock()
         shared.pocitadlo1 += 1
