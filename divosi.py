@@ -31,7 +31,12 @@ def vypis_ze_su_tu_vsetci(i):
     if i == 0:
         print("Všetci divočáci sú tu ide sa jesť")
 
-def divochJe(i, shared):
+def divoch_je(i, shared):
+    """
+    Táto funkcia simuluje hodovanie divochov
+    :param shared: Zdielané data
+    :param i: id vlákna
+    """
 
     while True:
         shared.barier2Mutex.lock()
@@ -88,7 +93,7 @@ def varenie(shared):
         print("Kuchar varí jedlo pre divočákov")
         sleep(2)  # simuluje dlhšie trvanie úkonu
         shared.hrniec = 10  # navarí plný hrniec
-        shared.kucharDovar.signal()
+        shared.kucharDovar.signal()  # kuchár dá signál že je navarené
 
 
 def main():
@@ -98,7 +103,7 @@ def main():
     divoch = []
 
     for i in range(N):
-        divoch.append(Thread(divochJe, i, shared))
+        divoch.append(Thread(divoch_je, i, shared))
     kuchar = Thread(varenie, shared)
 
     for t in divoch + [kuchar]:
