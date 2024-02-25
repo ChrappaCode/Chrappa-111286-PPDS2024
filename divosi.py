@@ -7,6 +7,7 @@ from time import sleep
 from random import randint
 
 N = 7  # konštanta počet divochov
+H = 10  # konštanta počet porcii
 
 class Shared(object):
 
@@ -14,7 +15,7 @@ class Shared(object):
 
         self.kucharVar = Semaphore(0)
         self.kucharDovar = Semaphore(0)
-        self.hrniec = 10  # veľkosť hrnca
+        self.hrniec = H  # veľkosť hrnca
         self.mutex = Mutex()
 
 
@@ -92,7 +93,7 @@ def varenie(shared):
         shared.kucharVar.wait()  # kuchár čaká kým mu divoch dá signál že je hrniec prázdny
         print("Kuchar varí jedlo pre divočákov")
         sleep(2)  # simuluje dlhšie trvanie úkonu
-        shared.hrniec = 10  # navarí plný hrniec
+        shared.hrniec = H  # navarí plný hrniec
         shared.kucharDovar.signal()  # kuchár dá signál že je navarené
 
 
