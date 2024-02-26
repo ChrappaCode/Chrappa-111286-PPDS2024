@@ -6,4 +6,8 @@ Táto vetva obsahuje zdrojové kódy ku **zadaniu 2** z PPDS. Zadanie je vyvíja
 
 ## divosi.py
 
-Toto vypracovanie rieši problém hodujúcich divochov pomocou **znovopoužiteľnej bariéry**. V mojom kóde sa nachádzajú 2 konštanty `N` a `H`. `N` reprezentuje počet divochov a `H` reprezentuje veľkosť hrnca. 
+Toto vypracovanie rieši problém hodujúcich divochov pomocou **znovopoužiteľnej bariéry**. V mojom kóde sa nachádzajú 2 konštanty `N` a `H`. `N` reprezentuje počet divochov a `H` reprezentuje veľkosť hrnca. Riešenie funguje na princípe ako je opísané v časti o úlohe zadania. V implementácií je vyžitých niekoľko `sleep()` funkcií na sprehľadnenie výpisu a simulovania dlhšieho vykonávania úkonu. 
+
+Ďalej v implementácií ako je spomenuté vyššie sme využili znovopoužiteľnú bariéru: 
+
+
