@@ -27,3 +27,8 @@ V ďaľších dvoch fragmentoch kódu je ukázaná časť kde si divoch všimne,
 Ukážka výpisu programu v iterácií, v ktore si divoch všimne, že je hrniec prázdny:
 
 ![](/img/vypis.png)
+
+Vo výpise je vidieť, že všetkých `N` vláknie (divochov) sa na začiatku počká náslene idú hodovať. V momente čo si divoch všimne, že už neni v hrnci žiadna porcia povie kuchárovi, že má navariť, kuchár navarí a hostina môže pokračovať.
+
+## Zdroje
+
