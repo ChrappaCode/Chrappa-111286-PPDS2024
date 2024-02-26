@@ -34,6 +34,6 @@ Vo výpise je vidieť, že všetkých `N` vláknie (divochov) sa na začiatku po
 
 *[Markdown Guide](https://www.markdownguide.org)*
 
-*[Prednáška 2]([https://elearn.elf.stuba.sk/moodle/pluginfile.php/76973/mod_resource/content/1/2024-01.uvod_do_paralelnych_a_distribuovanych_vypoctov.pdf](https://elearn.elf.stuba.sk/moodle/pluginfile.php/77169/mod_resource/content/2/2024-02.mutex%20multiplex%20randezvouse%20bariera.pdf)https://elearn.elf.stuba.sk/moodle/pluginfile.php/77169/mod_resource/content/2/2024-02.mutex%20multiplex%20randezvouse%20bariera.pdf)*
+*[Prednáška 2](https://elearn.elf.stuba.sk/moodle/pluginfile.php/77169/mod_resource/content/2/2024-02.mutex%20multiplex%20randezvouse%20bariera.pdf)*
 
 *Seminár 2 PDF*
