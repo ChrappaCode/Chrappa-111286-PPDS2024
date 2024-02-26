@@ -10,4 +10,6 @@ Toto vypracovanie rieši problém hodujúcich divochov pomocou **znovopoužiteľ
 
 Ďalej v implementácií ako je spomenuté vyššie sme využili znovopoužiteľnú bariéru: 
 
+![](/img/bariera.png)
 
+Znovopoužiteľná bariéra sa skladá z dvoch jednoduchých bariér. Funkčnosť jednoduchej bariéry je jednoduchá princípom je, že na začiatku je *turniket* (`Semaphore`) zablokovaný. N-té vlákno, ktoré k *turniketu* príde *turniket* odblokuje pre N vlákien, ktoré následne všetky prejdú *bariérov*. Ako na obrázku vyššie vidno takúto jednoduchú bariéru sme implementovali 2 krát po sebe z dvôvodu znovopoužiteľnosti, práve preto že náš kód beží vo `while True` cykle a môže pri použití len jednej jednoduchej bariéry v dôsledku preplánovania vlákien prísť ku uviaznutiu vlákna. 
