@@ -4,9 +4,8 @@ __email__ = "xchrappaj@stuba.sk"
 
 from fei.ppds import Mutex, Thread, Semaphore, print
 from time import sleep
-from random import randint
 
-N = 7  # konštanta počet divochov
+N = 7   # konštanta počet divochov
 H = 10  # konštanta počet porcii
 
 class Shared(object):
@@ -42,7 +41,6 @@ def divoch_je(i, shared):
     while True:
         shared.barier2Mutex.lock()
         shared.pocitadlo2 += 1
-        #print(f"Divočák {i} prišiel a čaká na ostatných. Je nás tu: {shared.pocitadlo1}")
         if shared.pocitadlo2 == N:
             shared.pocitadlo2 = 0
             shared.bariera2.signal(N)
@@ -79,10 +77,6 @@ def divoch_je(i, shared):
         print(f"Divočák {i} hoduje")
         sleep(1)
         print(f"Divočák {i} ide na lov")
-
-
-        #sleep(30)
-
 
 def varenie(shared):
     """
