@@ -1,7 +1,6 @@
 __authors__ = "Jakub Chrappa"
 __email__ = "xchrappaj@stuba.sk"
 
-
 from fei.ppds import Mutex, Thread, Semaphore, print
 from time import sleep
 

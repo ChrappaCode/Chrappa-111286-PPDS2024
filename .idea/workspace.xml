@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee236a34-18a7-4671-b76a-c6007e58db20" name="Changes" comment="Fix: sprehľadnenie kódu" />
+    <list default="true" id="ee236a34-18a7-4671-b76a-c6007e58db20" name="Changes" comment="Added: kuchar_rande.png&#10;Added: varenie.png">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/divosi.py" beforeDir="false" afterPath="$PROJECT_DIR$/divosi.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -55,10 +58,11 @@
   &quot;keyToString&quot;: {
     &quot;Python.1semafor.executor&quot;: &quot;Run&quot;,
     &quot;Python.2semafory.executor&quot;: &quot;Run&quot;,
+    &quot;Python.divosi.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;01&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;02&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/chrappa/PycharmProjects/Chrappa-111286-PPDS2024&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -125,6 +129,10 @@
       <updated>1707924349625</updated>
       <workItem from="1707924350796" duration="729000" />
       <workItem from="1707931976803" duration="18732000" />
+      <workItem from="1708635754277" duration="8722000" />
+      <workItem from="1708936169979" duration="284000" />
+      <workItem from="1708936464899" duration="25000" />
+      <workItem from="1708936503194" duration="2004000" />
     </task>
     <task id="LOCAL-00001" summary="Added: 1semafor.py&#10;Added: 2semafory.py">
       <option name="closed" value="true" />
@@ -190,7 +198,95 @@
       <option name="project" value="LOCAL" />
       <updated>1708458407613</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Fix: bug fix">
+      <option name="closed" value="true" />
+      <created>1708635803886</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1708635803886</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Update: README.md">
+      <option name="closed" value="true" />
+      <created>1708635937761</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1708635937761</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Update">
+      <option name="closed" value="true" />
+      <created>1708636007542</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1708636007542</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Update: divosi.py">
+      <option name="closed" value="true" />
+      <created>1708676636286</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1708676636286</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Update: divosi.py (druhá bariera)">
+      <option name="closed" value="true" />
+      <created>1708796519120</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1708796519120</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Update: divosi.py (sleep() - na sprehľadnenie vypisu)">
+      <option name="closed" value="true" />
+      <created>1708796710523</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1708796710523</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Update: divosi.py">
+      <option name="closed" value="true" />
+      <created>1708796862233</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1708796862233</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Added: divosi.py (konštanty)&#10;Added: vypis.png">
+      <option name="closed" value="true" />
+      <created>1708883887459</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1708883887459</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Removed: divosi.py (zbytočný kód)&#10;Added: bariera.png">
+      <option name="closed" value="true" />
+      <created>1708931864380</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1708931864380</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Added: mutex_integrita.png">
+      <option name="closed" value="true" />
+      <created>1708932419488</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1708932419488</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Added: kuchar_rande.png&#10;Added: varenie.png">
+      <option name="closed" value="true" />
+      <created>1708932695004</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1708932695004</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,11 +299,22 @@
     <MESSAGE value="Fix: odstránenie zbytočného kódu" />
     <MESSAGE value="Fix: sprehľadnenie kódu" />
     <MESSAGE value="Added: divosi.py (prvá verzia)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added: divosi.py (prvá verzia)" />
+    <MESSAGE value="Fix: bug fix" />
+    <MESSAGE value="Update: README.md" />
+    <MESSAGE value="Update" />
+    <MESSAGE value="Update: divosi.py (druhá bariera)" />
+    <MESSAGE value="Update: divosi.py (sleep() - na sprehľadnenie vypisu)" />
+    <MESSAGE value="Update: divosi.py" />
+    <MESSAGE value="Added: divosi.py (konštanty)&#10;Added: vypis.png" />
+    <MESSAGE value="Removed: divosi.py (zbytočný kód)&#10;Added: bariera.png" />
+    <MESSAGE value="Added: mutex_integrita.png" />
+    <MESSAGE value="Added: kuchar_rande.png&#10;Added: varenie.png" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added: kuchar_rande.png&#10;Added: varenie.png" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Chrappa_111286_PPDS2024$2semafory.coverage" NAME="2semafory Coverage Results" MODIFIED="1708515853515" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Chrappa_111286_PPDS2024$2semafory.coverage" NAME="2semafory Coverage Results" MODIFIED="1708635771787" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Chrappa_111286_PPDS2024$1semafor.coverage" NAME="1semafor Coverage Results" MODIFIED="1708515867033" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Chrappa_111286_PPDS2024$divosi.coverage" NAME="divosi Coverage Results" MODIFIED="1709056986709" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Chrappa_111286_PPDS2024$main.coverage" NAME="main Coverage Results" MODIFIED="1707932999858" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
