@@ -50,6 +50,11 @@ class Shared(object):
 
 
 def pasazier(i, shared):
+    """
+    Táto funckia reprezentuje pasažiera a jeho úkony
+    :param i: id pasažiera
+    :param shared: zdielané dáta
+    """
     while True:
         shared.nastupQueue.wait()
         nastup(i)
@@ -60,6 +65,10 @@ def pasazier(i, shared):
         shared.vystupBarier.wait(is_vystup=True)
 
 def husenka(shared):
+    """
+    Táto funckia reprezentuje húsenku na dráhe
+    :param shared: zdielané dáta
+    """
     while True:
         napln()
         shared.nastupQueue.signal(C)
