@@ -8,7 +8,7 @@ Táto vetva obsahuje zdrojové kódy ku **zadaniu 3** z PPDS. Zadanie je vyvíja
 
 Tento zdrojový kód obsahuje implementáciu/riešenie problému húsenkovej dráhy. V riešení uvažujeme, že na dráhu čaká `N` ľudi a kapacita húsenky je `C` (Spravidla `N > C`). Následne každý pasažier chodí do skupinky, ktorá čaká na jazdu a čaká na húsenku (v kóde reprezentované ako `shared.nastupQueue.wait()`). Následne ak húsenka dokončila poslednú jazdu dá signál pasažierom, že je pripravená na ďalšiu jazdu. Následne `C` pasažierov nastúpi do húsenky, posledný dá signál húsenke, že ako posledný nastúpil a húsenka môže ísť. Húsenka urobí jazdu a príde naspäť a čaká kým pasažiery vystúpia. Následne ako aj pri nástupe posledný pasažier dá husenke signál, že je posledný, a že môže začať nástup na ďalšiu jazdu. Celá implementácia je vo `while True` cykle.
 
-V zadaní môže nastať problém vyhladovania, na ktorý si treba dať pozor.
+V zadaní môže nastať problém **vyhladovania**, na ktorý si treba dať pozor.
 
 Ukážka použitia upravenej bariéry, ktorá dáva signál húsenke:
 
