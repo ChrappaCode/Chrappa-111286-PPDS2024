@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ee236a34-18a7-4671-b76a-c6007e58db20" name="Changes" comment="Added: husenkova_draha.py (komentáre)" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="02" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ChrappaCode&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="1b288226-14af-45ec-b902-d2d8e97efc3b" />
+        <option name="url" value="git@github.com:ChrappaCode/Chrappa-111286-PPDS2024.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2cMbMoSmfwZ6A4M4WCHsTmjOwhg" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.1semafor.executor": "Run",
+    "Python.2semafory.executor": "Run",
+    "Python.divosi.executor": "Run",
+    "Python.husenkova_draha.executor": "Run",
+    "Python.main.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "03",
+    "last_opened_file_path": "/Users/chrappa/PycharmProjects/Chrappa-111286-PPDS2024",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "advanced.settings",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/img" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="2semafory" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Chrappa-111286-PPDS2024" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/2semafory.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.2semafory" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-5a2391486177-2887949eec09-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.13763.11" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ee236a34-18a7-4671-b76a-c6007e58db20" name="Changes" comment="" />
+      <created>1707924349625</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1707924349625</updated>
+      <workItem from="1707924350796" duration="729000" />
+      <workItem from="1707931976803" duration="18732000" />
+      <workItem from="1708635754277" duration="8722000" />
+      <workItem from="1708936169979" duration="284000" />
+      <workItem from="1708936464899" duration="25000" />
+      <workItem from="1708936503194" duration="7967000" />
+    </task>
+    <task id="LOCAL-00001" summary="Added: 1semafor.py&#10;Added: 2semafory.py">
+      <option name="closed" value="true" />
+      <created>1708074904101</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1708074904101</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added: hygiena.img">
+      <option name="closed" value="true" />
+      <created>1708192827212</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1708192827212</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added: vypisy z konzoly">
+      <option name="closed" value="true" />
+      <created>1708193107768</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1708193107768</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added: vypisy z konzoly">
+      <option name="closed" value="true" />
+      <created>1708193559833</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1708193559833</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Added: vypisy z konzoly">
+      <option name="closed" value="true" />
+      <created>1708193726048</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1708193726048</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Fix: odstránenie zbytočného kódu">
+      <option name="closed" value="true" />
+      <created>1708447906806</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1708447906806</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Fix: sprehľadnenie kódu">
+      <option name="closed" value="true" />
+      <created>1708458317634</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1708458317634</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Fix: sprehľadnenie kódu">
+      <option name="closed" value="true" />
+      <created>1708458407613</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1708458407613</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Fix: bug fix">
+      <option name="closed" value="true" />
+      <created>1708635803886</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1708635803886</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Update: README.md">
+      <option name="closed" value="true" />
+      <created>1708635937761</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1708635937761</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Update">
+      <option name="closed" value="true" />
+      <created>1708636007542</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1708636007542</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Update: divosi.py">
+      <option name="closed" value="true" />
+      <created>1708676636286</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1708676636286</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Update: divosi.py (druhá bariera)">
+      <option name="closed" value="true" />
+      <created>1708796519120</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1708796519120</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Update: divosi.py (sleep() - na sprehľadnenie vypisu)">
+      <option name="closed" value="true" />
+      <created>1708796710523</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1708796710523</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Update: divosi.py">
+      <option name="closed" value="true" />
+      <created>1708796862233</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1708796862233</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Added: divosi.py (konštanty)&#10;Added: vypis.png">
+      <option name="closed" value="true" />
+      <created>1708883887459</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1708883887459</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Removed: divosi.py (zbytočný kód)&#10;Added: bariera.png">
+      <option name="closed" value="true" />
+      <created>1708931864380</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1708931864380</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Added: mutex_integrita.png">
+      <option name="closed" value="true" />
+      <created>1708932419488</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1708932419488</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Added: kuchar_rande.png&#10;Added: varenie.png">
+      <option name="closed" value="true" />
+      <created>1708932695004</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1708932695004</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Fixed: small visual code adjusts">
+      <option name="closed" value="true" />
+      <created>1709068275399</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1709068275399</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Added: main.py (prvý draft zadania)">
+      <option name="closed" value="true" />
+      <created>1709145452380</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1709145452380</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Change: husenkova_draha.py (názov súboru)">
+      <option name="closed" value="true" />
+      <created>1709145512247</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1709145512247</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Added: husenkova_draha.py (komentáre)">
+      <option name="closed" value="true" />
+      <created>1709146604951</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1709146604951</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added: 1semafor.py&#10;Added: 2semafory.py" />
+    <MESSAGE value="Added: hygiena.img" />
+    <MESSAGE value="Added: vypisy z konzoly" />
+    <MESSAGE value="Fix: odstránenie zbytočného kódu" />
+    <MESSAGE value="Fix: sprehľadnenie kódu" />
+    <MESSAGE value="Added: divosi.py (prvá verzia)" />
+    <MESSAGE value="Fix: bug fix" />
+    <MESSAGE value="Update: README.md" />
+    <MESSAGE value="Update" />
+    <MESSAGE value="Update: divosi.py (druhá bariera)" />
+    <MESSAGE value="Update: divosi.py (sleep() - na sprehľadnenie vypisu)" />
+    <MESSAGE value="Update: divosi.py" />
+    <MESSAGE value="Added: divosi.py (konštanty)&#10;Added: vypis.png" />
+    <MESSAGE value="Removed: divosi.py (zbytočný kód)&#10;Added: bariera.png" />
+    <MESSAGE value="Added: mutex_integrita.png" />
+    <MESSAGE value="Added: kuchar_rande.png&#10;Added: varenie.png" />
+    <MESSAGE value="Fixed: small visual code adjusts" />
+    <MESSAGE value="Added: main.py (prvý draft zadania)" />
+    <MESSAGE value="Change: husenkova_draha.py (názov súboru)" />
+    <MESSAGE value="Added: husenkova_draha.py (komentáre)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added: husenkova_draha.py (komentáre)" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Chrappa_111286_PPDS2024$husenkova_draha.coverage" NAME="husenkova_draha Coverage Results" MODIFIED="1709153677078" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Chrappa_111286_PPDS2024$2semafory.coverage" NAME="2semafory Coverage Results" MODIFIED="1708635771787" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Chrappa_111286_PPDS2024$1semafor.coverage" NAME="1semafor Coverage Results" MODIFIED="1708515867033" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Chrappa_111286_PPDS2024$divosi.coverage" NAME="divosi Coverage Results" MODIFIED="1709121943090" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Chrappa_111286_PPDS2024$main.coverage" NAME="main Coverage Results" MODIFIED="1709145339997" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>
