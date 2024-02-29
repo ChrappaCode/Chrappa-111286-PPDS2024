@@ -14,7 +14,7 @@ Ukážka použitia upravenej bariéry, ktorá dáva signál húsenke:
 
 ![](/img/upravena_bariera.png)
 
-Vypis z konzoli po 2 iteráciách:
+Vypis z konzoly po 2 iteráciách:
 
 ![](/img/vypis.png)
 
