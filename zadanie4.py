@@ -38,7 +38,7 @@ else:
 
 B = comm.bcast(B, root=MASTER)
 
-print("Performing matrix multiplication..")
+print("Nasobenie matíc..")
 C_loc = np.zeros((rows_per_proc + (1 if rank < extra_rows else 0), NCB), dtype=int)
 
 if rank != MASTER:
