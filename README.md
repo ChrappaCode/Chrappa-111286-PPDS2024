@@ -1,5 +1,4 @@
-# PPDS Repozitár (Predmet: Paralelné programovanie a distribuované systémy)
+# Zadanie 04
 
-## Autor
-- Bc. Jakub Chrappa
-- Email: xchrappaj@stuba.sk
+Táto vetva obsahuje zdrojové kódy ku zadaniu 4 z PPDS. Zadanie je vyvíjané v Pythone a testované s interpreterom 3.12.
+
