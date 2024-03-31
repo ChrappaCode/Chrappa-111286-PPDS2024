@@ -20,6 +20,9 @@ def custom_matrix_multiply(A, B):
                 C[i][j] += A[i][k] * B[k][j]
     return C
 
+if rank == MASTER:
+    start_time = MPI.Wtime()
+
 print("Paralelne násobenie matíc..")
 print(f"Matrix sizes A[{NRA}][{NCA}], B[{NCA}][{NCB}], C[{NRA}][{NCB}]")
 
@@ -59,5 +62,7 @@ comm.Gather([C_loc, MPI.INT], [C, MPI.INT], root=MASTER)
 if rank == MASTER:
     print("Vysledok nasobenia:")
     print(C)
+    end_time = MPI.Wtime()
+    print("Čas:", end_time - start_time, "sekúnd")
 
 print("HOTOVO")

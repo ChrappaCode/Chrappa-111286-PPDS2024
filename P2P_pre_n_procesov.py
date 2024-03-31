@@ -10,6 +10,9 @@ comm = MPI.COMM_WORLD
 rank = comm.Get_rank()
 nproc = comm.Get_size()
 
+if rank == MASTER:
+    start_time = MPI.Wtime()
+
 print("Paralelne násobenie matíc..")
 print(f"Matrix sizes A[{NRA}][{NCA}], B[{NCA}][{NCB}], C[{NRA}][{NCB}]")
 
@@ -64,6 +67,8 @@ else:
 
     print("Vysledok nasobenia:")
     print(C)
+    end_time = MPI.Wtime()
+    print("Čas:", end_time - start_time, "sekúnd")
 
 #print(A.dot(B))
 print("HOTOVO")
