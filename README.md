@@ -6,7 +6,14 @@ Zadanie spočíva k úprave kódu z cvičenia, inšpirovaného z [kódu na tomto
 
 ## P2P_pre_n_procesov.py
 
-Tento zdrojový kód obsahuje implementáciu/riešenie problému násobenia matíc pomocou viacerých pracovných uzlov pomocou P2P komunikácie. Riešenie je schopné použiť rôzny počet pracovných uzlov (1-8 na mojom zariadení). 
+Tento zdrojový kód obsahuje implementáciu/riešenie problému násobenia matíc pomocou viacerých pracovných uzlov pomocou P2P komunikácie. Riešenie je schopné použiť rôzny počet pracovných uzlov (1-8 na mojom zariadení). Na fungovanie rôzneho počtu pracovných uzlov sme museli doimplementovať riešenie nadbytočných riadkov matice. Tento problém som vyriešil pomocou `extra_rows = NRA % nproc
+`. Následne sme tieto riadky navyše zohľadnili pri indexovaní `ind += rows_per_proc + (1 if proc < extra_rows else 0)`.
+
+Ukážka upravenej funkcie:
+
+![](/img/upravena_funkcia.png)
+
+Spustenie/Výstup programu:
 
 ![](/img/P2P_in.png)
 
@@ -16,9 +23,17 @@ Tento zdrojový kód obsahuje implementáciu/riešenie problému násobenia mat�
 
 Tento zdrojový kód obsahuje implementáciu/riešenie problému násobenia matíc pomocou viacerých pracovných uzlov pomocou kolektívnej komunikácie (`scatter()/gather()`).
 
+Ukážka upravenej funkcie:
+
+![](/img/kolektiv_funkcia.png)
+
+Spustenie/Výstup programu:
+
 ![](/img/Kolektiv_in.png)
 
 ![](/img/Kolektiv_vysledok.png)
+
+# Analýza
 
 ## Zdroje
 
