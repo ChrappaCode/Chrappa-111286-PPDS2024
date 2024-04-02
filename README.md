@@ -8,9 +8,17 @@ Zadanie spočíva k úprave kódu z cvičenia, inšpirovaného z [kódu na tomto
 
 Tento zdrojový kód obsahuje implementáciu/riešenie problému násobenia matíc pomocou viacerých pracovných uzlov pomocou P2P komunikácie. Riešenie je schopné použiť rôzny počet pracovných uzlov (1-8 na mojom zariadení). 
 
+![](/img/P2P_in.png)
+
+![](/img/P2P_vysledok.png)
+
 ## Kolektivna_kom.py
 
 Tento zdrojový kód obsahuje implementáciu/riešenie problému násobenia matíc pomocou viacerých pracovných uzlov pomocou kolektívnej komunikácie (`scatter()/gather()`).
+
+![](/img/Kolektiv_in.png)
+
+![](/img/Kolektiv_vysledok.png)
 
 ## Zdroje
 
