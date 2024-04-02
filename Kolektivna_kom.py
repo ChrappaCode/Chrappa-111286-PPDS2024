@@ -46,7 +46,6 @@ A_loc = np.zeros((rows_per_proc + (1 if rank < extra_rows else 0), NCA), dtype=i
 # Scatter matrix A
 comm.Scatter([A, MPI.INT], [A_loc, MPI.INT])
 
-# Broadcast matrix B
 B = comm.bcast(B, root=MASTER)
 
 print("Nasobenie matíc..")
