@@ -6,7 +6,11 @@ Zadanie spočíva k úprave kódu z cvičenia, inšpirovaného z https://kurzy.k
 
 ## P2P_pre_n_procesov.py
 
+Tento zdrojový kód obsahuje implementáciu/riešenie problému násobenia matíc pomocou viacerých pracovných uzlov pomocou P2P komunikácie. Riešenie je schopné použiť rôzny počet pracovných uzlov (1-8 na mojom zariadení). 
+
 ## Kolektivna_kom.py
+
+Tento zdrojový kód obsahuje implementáciu/riešenie problému násobenia matíc pomocou viacerých pracovných uzlov pomocou kolektívnej komunikácie.
 
 ## Zdroje
 
