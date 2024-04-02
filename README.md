@@ -35,6 +35,20 @@ Spustenie/Výstup programu:
 
 # Analýza
 
+Táto časť sa venuje len časovej analýze (analýze efektívnosti) naších riešení. K našim riešeniam som pridal pre porovnanie aj riešenie bez paralelizmu.
+
+## P2P_analyza.py
+
+![](/img/P2P_analyza.png)
+
+## Kolektivna_analyza.py
+
+![](/img/Kolektivna_analyza.png)
+
+## analyza_bez_paralelizmu.py
+
+![](/img/bez_paralelizmu_analyza.png)
+
 ## Zdroje
 
 *[Markdown Guide](https://www.markdownguide.org)*
