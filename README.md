@@ -9,3 +9,13 @@ Zadanie spočíva k úprave kódu z cvičenia, inšpirovaného z https://kurzy.k
 ## Kolektivna_kom.py
 
 ## Zdroje
+
+*[Markdown Guide](https://www.markdownguide.org)*
+
+*Seminár 7 PDF*
+
+*Seminár 7 kódy z GitHub*
+
+*[ChatGPT](https://chat.openai.com/)*
+
+*[Kód z ktorého sme sa inšpirovali](https://kurzy.kpi.fei.tuke.sk/pp/labs/pp_mm.c)
