@@ -35,7 +35,7 @@ Spustenie/Výstup programu:
 
 # Analýza
 
-Táto časť sa venuje len časovej analýze (analýze efektívnosti) naších riešení. K našim riešeniam som pridal pre porovnanie aj riešenie bez paralelizmu.
+Táto časť sa venuje len časovej analýze (analýze efektívnosti) naších riešení. K našim riešeniam som pridal pre porovnanie aj riešenie bez paralelizmu. Výsledky daných analýz sú uvedené nižšie. Najlepšie je na tom práve analýza kódu bez použitia paralelizmu. Následne pri P2P a kolektívnej sú výsledky približne rovnaké záleží od merania a extrémov.
 
 ## P2P_analyza.py
 
