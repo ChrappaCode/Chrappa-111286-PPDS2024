@@ -18,4 +18,4 @@ Zadanie spočíva k úprave kódu z cvičenia, inšpirovaného z https://kurzy.k
 
 *[ChatGPT](https://chat.openai.com/)*
 
-*[Kód z ktorého sme sa inšpirovali](https://kurzy.kpi.fei.tuke.sk/pp/labs/pp_mm.c)
+*[Kód z ktorého sme sa inšpirovali](https://kurzy.kpi.fei.tuke.sk/pp/labs/pp_mm.c)*
