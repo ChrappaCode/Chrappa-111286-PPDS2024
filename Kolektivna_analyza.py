@@ -62,6 +62,7 @@ for _ in range(50):  # Run the code 50 times
         times.append(end_time - start_time)
 
 if rank == MASTER:
+    print(times)
     plt.hist(times, bins=10)
     plt.xlabel('Execution Time (seconds)')
     plt.ylabel('Frequency')
