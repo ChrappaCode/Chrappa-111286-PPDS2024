@@ -10,7 +10,7 @@ Tento zdrojový kód obsahuje implementáciu/riešenie problému násobenia mat�
 
 ## Kolektivna_kom.py
 
-Tento zdrojový kód obsahuje implementáciu/riešenie problému násobenia matíc pomocou viacerých pracovných uzlov pomocou kolektívnej komunikácie.
+Tento zdrojový kód obsahuje implementáciu/riešenie problému násobenia matíc pomocou viacerých pracovných uzlov pomocou kolektívnej komunikácie (`scatter()/gather()`).
 
 ## Zdroje
 
