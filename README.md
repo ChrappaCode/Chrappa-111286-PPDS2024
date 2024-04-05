@@ -35,15 +35,27 @@ Spustenie/Výstup programu:
 
 # Analýza
 
-Táto časť sa venuje len časovej analýze (analýze efektívnosti) naších riešení. K našim riešeniam som pridal pre porovnanie aj riešenie bez paralelizmu. Výsledky daných analýz sú uvedené nižšie. Najlepšie je na tom práve analýza kódu bez použitia paralelizmu. Následne pri P2P a kolektívnej sú výsledky približne rovnaké záleží od merania a extrémov.
+Táto časť sa venuje len časovej analýze (analýze efektívnosti) naších riešení. K našim riešeniam som pridal pre porovnanie aj riešenie bez paralelizmu. Výsledky daných analýz sú uvedené nižšie. Najlepšie je na tom práve analýza kódu bez použitia paralelizmu. Následne pri P2P a kolektívnej sú výsledky približne rovnaké záleží od merania a extrémov. Pri paralelných riešeniach výsledky mojich analýz ukázali, že menší počet pracovných uzlov je efektívnejší.
 
 ## P2P_analyza.py
 
+Pri použití viacerých pracovných uzlov:
+
 ![](/img/P2P_analyza.png)
+
+Pri použití 2 pracovných uzlov:
+
+![](/img/P2P_a_menej.png)
 
 ## Kolektivna_analyza.py
 
+Pri použití viacerých pracovných uzlov:
+
 ![](/img/Kolektivna_analyza.png)
+
+Pri použití 2 pracovných uzlov:
+
+![](/img/kolektivna_analyza_menej.png)
 
 ## analyza_bez_paralelizmu.py
 
