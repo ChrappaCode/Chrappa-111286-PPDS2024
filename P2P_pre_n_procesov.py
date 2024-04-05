@@ -5,7 +5,7 @@ NRA = 10  # number of rows in matrix A
 NCA = 3   # number of columns in matrix A
 NCB = 7   # number of columns in matrix B
 
-MASTER = 0
+MASTER = 3
 comm = MPI.COMM_WORLD
 rank = comm.Get_rank()
 nproc = comm.Get_size()
@@ -22,9 +22,13 @@ print("Inicializácia..")
 rows_per_proc = NRA // nproc
 extra_rows = NRA % nproc
 
+for proc in range(nproc):
+    if rank != MASTER:
+        A_loc = None
+        B = None
+
 if rank != MASTER:
-    A_loc = None
-    B = None
+    pass
 else:
     A = np.array([i + j for j in range(NRA) for i in range(NCA)]).reshape(NRA, NCA)
     B = np.array([i + j for j in range(NCA) for i in range(NCB)]).reshape(NCA, NCB)
@@ -58,12 +62,14 @@ else:
     ind = 0
     for proc in range(nproc):
         if proc == MASTER:
-            C[ind:ind+rows_per_proc + (1 if proc < extra_rows else 0)] = C_loc
-            ind += rows_per_proc + (1 if proc < extra_rows else 0)
+            C[ind:ind+len(C_loc)] = C_loc
+            ind += len(C_loc)
             continue
-        C_loc = comm.recv(source=proc)
-        C[ind:ind + len(C_loc)] = C_loc
-        ind += len(C_loc)
+        C_recv = comm.recv(source=proc)
+        row_start = ind
+        row_end = ind + len(C_recv)
+        C[row_start:row_end] = C_recv
+        ind = row_end
 
     print("Vysledok nasobenia:")
     print(C)
