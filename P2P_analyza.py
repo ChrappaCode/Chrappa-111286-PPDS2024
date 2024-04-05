@@ -6,7 +6,7 @@ NRA = 10  # number of rows in matrix A
 NCA = 3   # number of columns in matrix A
 NCB = 7   # number of columns in matrix B
 
-MASTER = 0
+MASTER = 1
 comm = MPI.COMM_WORLD
 rank = comm.Get_rank()
 nproc = comm.Get_size()
@@ -56,13 +56,19 @@ for _ in range(50):  # Run the code 50 times
         ind = 0
         for proc in range(nproc):
             if proc == MASTER:
-                C[ind:ind+rows_per_proc + (1 if proc < extra_rows else 0)] = C_loc
-                ind += rows_per_proc + (1 if proc < extra_rows else 0)
+                C[ind:ind + len(C_loc)] = C_loc
+                ind += len(C_loc)
                 continue
-            C_loc = comm.recv(source=proc)
-            C[ind:ind + len(C_loc)] = C_loc
-            ind += len(C_loc)
+            C_recv = comm.recv(source=proc)
+            row_start = ind
+            row_end = ind + len(C_recv)
+            C[row_start:row_end] = C_recv
+            ind = row_end
 
+        print("Vysledok nasobenia:")
+        print(C)
+        end_time = MPI.Wtime()
+        print("Čas:", end_time - start_time, "sekúnd")
         end_time = MPI.Wtime()
         times.append(end_time - start_time)
 
