@@ -4,7 +4,7 @@ Táto vetva obsahuje zdrojové kódy ku zadaniu 5 z PPDS. Zadanie je vyvíjané 
 
 ## sample_sort_serial.py
 
-Tento kód implementuje algoritmus nazvaný "sample sort" na triedenie polí. Ide o algoritmus, ktorý je podobný quicksortu. Ide o sériové riešenie tohto problému.
+Tento kód implementuje algoritmus nazvaný "*sample sort*" na triedenie polí. Ide o algoritmus, ktorý je podobný quicksortu. Ide o sériové riešenie tohto problému.
 
 Výstup pre malý vstup (array size 10):
 
@@ -19,13 +19,11 @@ Výstup pre veľký vstup (array size 100000000):
 ![](/img/vystup_serial_velky_vstup.png)
 
 
-## cuda_riesenie2.py / sample_sort_cuda.py
+## cuda_riesenie2.py
 
-Tieto kódy implementuje paralelný triediaci algoritmus nazvaný "sample sort" pomocou technológie `CUDA` s pomocou knižnice `Numba`.
+Tento kód implementuje paralelný triediaci algoritmus nazvaný "*sample sort*" pomocou technológie `CUDA` s pomocou knižnice `numba`.
 
-### cuda_riesenie2.py
-
-**Veľkosť bloku:** Definujeme veľkosť bloku pre CUDA jadrá. Táto hodnota ovplyvňuje, koľko vlákien bude spustených na jednom multiprocesore na GPU.
+**Veľkosť bloku:** Definujeme veľkosť bloku pre CUDA jadrá. Táto hodnota ovplyvňuje, koľko vlákien bude spustených na jednom multiprocesore na GPU. Zmenou premennej `BLOCK_SIZE` na požadovaný počet vlákien na blok a CUDA jadro počas vykonávania použije túto hodnotu.
 
 **CUDA funkcia insertion_sort:** Toto je implementácia algoritmu insertion sort pomocou Numba CUDA. Každé vlákno na GPU sa stará o triedenie časti poľa pomocou tohto algoritmu.
 
