@@ -12,7 +12,7 @@ Výstup pre malý vstup (10):
 
 Výstup pre priemerný vstup (10000):
 
-![](/img/vystup_serial_priemerny_vstup.png)
+![](/img/vystup_serial_mriemerny_vstup.png)
 
 Výstup pre veľký vstup (10000000):
 
@@ -27,7 +27,7 @@ Výstup pre malý vstup (10):
 
 Výstup pre priemerný vstup (10000):
 
-![](/img/vystup_cuda_priemerný_vstup.png)
+![](/img/vystup_cuda_mriemerný_vstup.png)
 
 Výstup pre veľký vstup (10000000):
 
