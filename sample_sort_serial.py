@@ -3,9 +3,7 @@ import numpy as np
 
 
 def sample_sort_serialized(A, threshold):
-
     n = len(A)
-
     # Step 1
     if n < threshold:
         return sorted(A)
@@ -27,12 +25,12 @@ def sample_sort_serialized(A, threshold):
 
 
 # Test the implementation
-A = np.random.randint(0, 10000, size=1000000)
-threshold = 1000000
+A = np.random.randint(0, 10000, size=10)
+threshold = 10
 
 print("Original array:", A)
 start_time = time.time()  # Record start time
 sorted_A = sample_sort_serialized(A, threshold)
 end_time = time.time()  # Record end time
 print("Time taken for sorting:", end_time - start_time, "seconds")
-#print("Sorted array:", sorted_A)
+print("Sorted array:", sorted_A)
