@@ -2,7 +2,6 @@ from numba import cuda
 import numpy as np
 import time
 
-
 @cuda.jit
 def bucket_assignment_kernel(A, S, splitters):
     tid = cuda.threadIdx.x + cuda.blockIdx.x * cuda.blockDim.x
@@ -35,15 +34,12 @@ def find_splitters_kernel(S, splitters, k):
         splitters[tid] = np.inf
 
 
-def sample_sort(A, k, p, threshold):
+def sample_sort(A, k, p):
     n = len(A)
-
-    if n / k < threshold:
-        return sorted(A)
 
     d_A = cuda.to_device(np.array(A))
     d_S = cuda.device_array_like(d_A)
-    d_splitters = cuda.device_array(p, dtype=A.dtype)
+    d_splitters = cuda.device_array(p, dtype=np.float32)
 
     grid_size = (n + 255) // 256
     block_size = 256
@@ -63,15 +59,13 @@ def sample_sort(A, k, p, threshold):
 
 
 # Test the implementation
-A = np.random.randint(0, 10000, size=100000000)
-k = 2
-p = 3  # Changed to 4 partitions
-threshold = 100000000
+A = np.random.randint(0, 10000, size=100)
+k = 10  # blok
+p = 4  # Changed to 4 partitions
 
 print("Original array:", A)
 start_time = time.time()
-sorted_A = sample_sort(A, k, p, threshold)
+sorted_A = sample_sort(A, k, p)
 end_time = time.time()
 print("Time taken for sorting:", end_time - start_time, "seconds")
 print("Sorted array:", sorted_A)
-
