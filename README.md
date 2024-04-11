@@ -21,6 +21,8 @@ Výstup pre veľký vstup (10000000):
 
 ## sample_sort_cuda.py
 
+Tento kód implementuje paralelný triediaci algoritmus nazvaný "sample sort" pomocou technológie `CUDA` s pomocou knižnice `Numba`.
+
 Výstup pre malý vstup (10):
 
 ![](/img/vystup_cuda_maly_vstup.png)
