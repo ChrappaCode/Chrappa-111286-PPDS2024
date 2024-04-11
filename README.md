@@ -31,9 +31,11 @@ Výstup pre priemerný vstup (array size 10000):
 
 ![](/img/vystup_cuda_mriemerný_vstup.png)
 
-Výstup pre veľký vstup (array size 100000000):
+Výstup pre veľký vstup (array size 10000000):
 
-![](/img/vystup_cuda_velky_vstup.png)
+![](/img/vystup_cuda_velky_vstup2.png)
+
+
 
 
 ## Zdroje
