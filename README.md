@@ -19,11 +19,9 @@ Výstup pre veľký vstup (array size 100000000):
 ![](/img/vystup_serial_velky_vstup.png)
 
 
-## cuda_riesenie2.py / sample_sort_cuda.py
+## cuda_riesenie2.py
 
 Tieto kódy implementuje paralelný triediaci algoritmus nazvaný "sample sort" pomocou technológie `CUDA` s pomocou knižnice `Numba`.
-
-### cuda_riesenie2.py
 
 **Veľkosť bloku:** Definujeme veľkosť bloku pre CUDA jadrá. Táto hodnota ovplyvňuje, koľko vlákien bude spustených na jednom multiprocesore na GPU.
 
