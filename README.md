@@ -23,6 +23,12 @@ Výstup pre veľký vstup (array size 100000000):
 
 Tieto kódy implementuje paralelný triediaci algoritmus nazvaný "sample sort" pomocou technológie `CUDA` s pomocou knižnice `Numba`.
 
+**Veľkosť bloku:** Definujeme veľkosť bloku pre CUDA jadrá. Táto hodnota ovplyvňuje, koľko vlákien bude spustených na jednom multiprocesore na GPU.
+
+**CUDA funkcia insertion_sort:** Toto je implementácia algoritmu insertion sort pomocou Numba CUDA. Každé vlákno na GPU sa stará o triedenie časti poľa pomocou tohto algoritmu.
+
+**Funkcia sample_sort:** Táto funkcia riadi celý algoritmus vzorkového triedenia. Najprv prebieha fáza vzorkovania a triedenia na CPU, kde sa vyberú vzorky a zoradia sa. Potom sa vyberú pivoty a prvky sa rozdelia do podmnožín. Potom je každá podmnožina triedená paralelne pomocou insertion sort na GPU. Nakoniec sú zoradené podmnožiny spojené do konečného zoradeného poľa.
+
 Výstup pre malý vstup (array size 10):
 
 ![](/img/vystup_cuda_maly_vstup.png)
@@ -34,8 +40,6 @@ Výstup pre priemerný vstup (array size 10000):
 Výstup pre veľký vstup (array size 10000000):
 
 ![](/img/vystup_cuda_velky_vstup2.png)
-
-
 
 
 ## Zdroje
