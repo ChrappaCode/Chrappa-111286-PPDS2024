@@ -2,7 +2,7 @@
 
 Táto vetva obsahuje zdrojové kódy ku zadaniu 5 z PPDS. Zadanie je vyvíjané v Pythone a testované s interpreterom `3.12`. Na implementáciu CUDY používam simulátor pretože môj notebook nemá grafickú kartu NVIDIA.
 
-## sample_sort_serial.py
+## sample_sort_ser.py / sample_sort_serial.py
 
 Tento kód implementuje algoritmus nazvaný "*sample sort*" na triedenie polí. Ide o algoritmus, ktorý je podobný quicksortu. Ide o sériové riešenie tohto problému.
 
@@ -41,7 +41,7 @@ Výstup pre priemerný vstup (array size 10000):
 
 ![](/img/vystup_cuda_mriemerný_vstup.png)
 
-Výstup pre veľký vstup (array size 10000000):
+Výstup pre veľký vstup (array size 1000000):
 
 ![](/img/vystup_cuda_velky_vstup2.png)
 
