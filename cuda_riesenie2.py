@@ -35,6 +35,7 @@ def sample_sort(arr):
     return final_sorted_array
 
 arr = np.random.randint(0, 10000, size=10000)
+print("Original array: ", arr)
 start_time = time.time()
 sorted_arr = sample_sort(arr)
 end_time = time.time()
