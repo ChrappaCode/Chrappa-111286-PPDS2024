@@ -1,46 +1,38 @@
-import random
 import time
+import numpy as np
 
-start_time = time.time()  # Record start time
 
-
-def sample_sort(A, k, threshold):
+def sample_sort_serialized(A, threshold):
 
     n = len(A)
 
     # Step 1
-    if n / k < threshold:
+    if n < threshold:
         return sorted(A)
 
-    S = random.sample(A, k * (p - 1))
-    S.sort()
-    splitters = [-float('inf')] + [S[i * k] for i in range(1, p - 1)] + [float('inf')]
-
     # Step 2
-    buckets = [[] for _ in range(k)]
-    for a in A:
-        for j in range(len(splitters) - 1):
-            if splitters[j] < a <= splitters[j + 1]:
-                buckets[j].append(a)
-                break
+    split_index = n // 2
+    splitter = A[split_index]
 
-    # Step 3 and concatenation
-    sorted_buckets = [sample_sort(bucket, k, threshold) for bucket in buckets]
-    sorted_A = [item for sublist in sorted_buckets for item in sublist]
+    # Step 3
+    left_bucket = [x for x in A if x <= splitter]
+    right_bucket = [x for x in A if x > splitter]
 
+    # Step 4 and concatenation
+    sorted_left = sample_sort_serialized(left_bucket, threshold)
+    sorted_right = sample_sort_serialized(right_bucket, threshold)
+    sorted_A = sorted_left + sorted_right
 
     return sorted_A
 
 
 # Test the implementation
-A = [3, 6, 8, 10, 1, 2, 1, 5, 9, 4, 7]
-k = 3  # Number of buckets
-p = 2  # Number of partitions
-threshold = 10  # Threshold for switching to a different sorting method
+A = np.random.randint(0, 10000, size=1000000)
+threshold = 1000000
 
 print("Original array:", A)
-sorted_A = sample_sort(A, k, threshold)
-print("Sorted array:", sorted_A)
-
+start_time = time.time()  # Record start time
+sorted_A = sample_sort_serialized(A, threshold)
 end_time = time.time()  # Record end time
 print("Time taken for sorting:", end_time - start_time, "seconds")
+#print("Sorted array:", sorted_A)
