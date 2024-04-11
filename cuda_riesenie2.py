@@ -29,11 +29,12 @@ def sample_sort(arr):
         insertion_sort[1, BLOCK_SIZE](subset)
         sorted_subsets[i * BLOCK_SIZE: (i + 1) * BLOCK_SIZE] = subset
 
+    #cuda.synchronize()
     final_sorted_array = np.sort(sorted_subsets)
 
     return final_sorted_array
 
-arr = np.random.randint(0, 10000, size=10000000)
+arr = np.random.randint(0, 10000, size=10000)
 start_time = time.time()
 sorted_arr = sample_sort(arr)
 end_time = time.time()
