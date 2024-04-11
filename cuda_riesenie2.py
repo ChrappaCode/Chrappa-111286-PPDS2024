@@ -2,7 +2,6 @@ import numpy as np
 import time
 from numba import cuda, types
 
-# Define the block size for CUDA kernels
 BLOCK_SIZE = 128
 
 @cuda.jit
@@ -22,12 +21,6 @@ def insertion_sort(arr):
         arr[j + 1] = key
 
 def sample_sort(arr):
-    # Step 1: Perform sampling and sorting on CPU
-    # (Not parallelized here for simplicity)
-
-    # Step 2: Choose pivots and distribute elements to subsets
-
-    # Step 3: Sort each subset using CUDA parallel sorting
     num_subsets = len(arr) // BLOCK_SIZE + 1
     sorted_subsets = np.empty_like(arr)
 
@@ -36,12 +29,10 @@ def sample_sort(arr):
         insertion_sort[1, BLOCK_SIZE](subset)
         sorted_subsets[i * BLOCK_SIZE: (i + 1) * BLOCK_SIZE] = subset
 
-    # Step 4: Concatenate sorted subsets to obtain the final sorted array
     final_sorted_array = np.sort(sorted_subsets)
 
     return final_sorted_array
 
-# Example usage:
 arr = np.random.randint(0, 10000, size=10000000)
 start_time = time.time()
 sorted_arr = sample_sort(arr)
