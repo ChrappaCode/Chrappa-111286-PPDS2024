@@ -41,6 +41,8 @@ Výstup pre veľký vstup (array size 10000000):
 
 ![](/img/vystup_cuda_velky_vstup2.png)
 
+Bohužial výsledky pre CUDA riešenie nie sú ideálne práve aj kvôli tomu, že používam len pomalý CUDA simulátor.
+
 
 ## Zdroje
 
