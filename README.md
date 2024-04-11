@@ -29,6 +29,9 @@ Tieto kódy implementuje paralelný triediaci algoritmus nazvaný "sample sort" 
 
 **Funkcia sample_sort:** Táto funkcia riadi celý algoritmus vzorkového triedenia. Najprv prebieha fáza vzorkovania a triedenia na CPU, kde sa vyberú vzorky a zoradia sa. Potom sa vyberú pivoty a prvky sa rozdelia do podmnožín. Potom je každá podmnožina triedená paralelne pomocou insertion sort na GPU. Nakoniec sú zoradené podmnožiny spojené do konečného zoradeného poľa.
 
+cuda_riesenie2.py rozdelenie do subsetov:
+![](/img/rozdelovanie.png)
+
 Výstup pre malý vstup (array size 10):
 
 ![](/img/vystup_cuda_maly_vstup.png)
