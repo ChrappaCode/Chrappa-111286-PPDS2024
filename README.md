@@ -4,7 +4,37 @@ Táto vetva obsahuje zdrojové kódy ku zadaniu 5 z PPDS. Zadanie je vyvíjané 
 
 ## sample_sort_serial.py
 
+Tento kód implementuje algoritmus nazvaný "sample sort" na triedenie polí. Ide o algoritmus, ktorý je podobný quicksortu. Ide o sériové riešenie tohto problému.
+
+Výstup pre malý vstup (array size 10):
+
+![](/img/vystup_serial_maly_vstup.png)
+
+Výstup pre priemerný vstup (array size 10000):
+
+![](/img/vystup_serial_mriemerny_vstup.png)
+
+Výstup pre veľký vstup (array size 100000000):
+
+![](/img/vystup_serial_velky_vstup.png)
+
+
 ## sample_sort_cuda.py
+
+Tento kód implementuje paralelný triediaci algoritmus nazvaný "sample sort" pomocou technológie `CUDA` s pomocou knižnice `Numba`.
+
+Výstup pre malý vstup (array size 10):
+
+![](/img/vystup_cuda_maly_vstup.png)
+
+Výstup pre priemerný vstup (array size 10000):
+
+![](/img/vystup_cuda_mriemerný_vstup.png)
+
+Výstup pre veľký vstup (array size 100000000):
+
+![](/img/vystup_cuda_velky_vstup.png)
+
 
 ## Zdroje
 
