@@ -1,4 +1,5 @@
 import numpy as np
+import time
 from numba import cuda, types
 
 # Define the block size for CUDA kernels
@@ -41,7 +42,7 @@ def sample_sort(arr):
     return final_sorted_array
 
 # Example usage:
-arr = np.random.randint(0, 10000, size=1000000)
+arr = np.random.randint(0, 10000, size=100000000)
 start_time = time.time()
 sorted_arr = sample_sort(arr)
 end_time = time.time()
