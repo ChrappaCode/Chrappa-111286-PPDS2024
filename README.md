@@ -6,15 +6,15 @@ Táto vetva obsahuje zdrojové kódy ku zadaniu 5 z PPDS. Zadanie je vyvíjané 
 
 Tento kód implementuje algoritmus nazvaný "sample sort" na triedenie polí. Ide o algoritmus, ktorý je podobný quicksortu. Ide o sériové riešenie tohto problému.
 
-Výstup pre malý vstup (10):
+Výstup pre malý vstup (array size 10):
 
 ![](/img/vystup_serial_maly_vstup.png)
 
-Výstup pre priemerný vstup (10000):
+Výstup pre priemerný vstup (array size 10000):
 
 ![](/img/vystup_serial_mriemerny_vstup.png)
 
-Výstup pre veľký vstup (10000000):
+Výstup pre veľký vstup (array size 10000000):
 
 ![](/img/vystup_serial_velky_vstup.png)
 
@@ -23,15 +23,15 @@ Výstup pre veľký vstup (10000000):
 
 Tento kód implementuje paralelný triediaci algoritmus nazvaný "sample sort" pomocou technológie `CUDA` s pomocou knižnice `Numba`.
 
-Výstup pre malý vstup (10):
+Výstup pre malý vstup (array size 10):
 
 ![](/img/vystup_cuda_maly_vstup.png)
 
-Výstup pre priemerný vstup (10000):
+Výstup pre priemerný vstup (array size 10000):
 
 ![](/img/vystup_cuda_mriemerný_vstup.png)
 
-Výstup pre veľký vstup (10000000):
+Výstup pre veľký vstup (array size 10000000):
 
 ![](/img/vystup_cuda_velky_vstup.png)
 
