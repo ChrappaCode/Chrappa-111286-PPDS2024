@@ -1,53 +1,52 @@
-import random
 import time
 import numpy as np
 
-def sample_sort(A, k, p, threshold):
-    n = len(A)
+def insertion_sort(arr):
+    for i in range(1, len(arr)):
+        key = arr[i]
+        j = i - 1
+        while j >= 0 and key < arr[j]:
+            arr[j + 1] = arr[j]
+            j -= 1
+        arr[j + 1] = key
 
-    if n / k < threshold:
-        A.sort()
-        return A
 
-    if k >= n:
-        S = sorted(A)
-    else:
-        S = [random.sample(A, k) for _ in range(p)]  # Randomly select k samples for each set
-        S = [item for sublist in S for item in sublist]  # Flatten the list of samples
-        S.sort()  # Sort the samples
+def sample_sort(arr):
+    # Determine the number of samples
+    num_samples = int(len(arr) ** 0.5)
 
-    # Generate splitters
-    splitters = [float('-inf')] + [S[i * k] for i in range(1, p)] + [float('inf')]
+    # Step 1: Sample the data
+    samples = sorted([arr[i] for i in range(0, len(arr), len(arr) // num_samples)])
 
-    buckets = [[] for _ in range(p)]
-    for a in A:
-        for j in range(1, len(splitters)):
-            if splitters[j - 1] < a <= splitters[j]:
-                buckets[j - 1].append(a)
+    # Step 2: Broadcast the samples to all processes
+    samples = [samples[i * len(samples) // num_samples] for i in range(num_samples)]
+
+    # Step 3: Each process partitions its data based on the sample points
+    partitions = [[] for _ in range(num_samples + 1)]
+    for num in arr:
+        for i in range(num_samples):
+            if num < samples[i]:
+                partitions[i].append(num)
                 break
-
-    stack = [(bucket, k, p, threshold) for bucket in buckets]
-    sorted_buckets = []
-    while stack:
-        bucket, k, p, threshold = stack.pop()
-        if len(bucket) > 1:
-            S = sample_sort(bucket, k, p, threshold)
-            sorted_buckets.extend(S)
         else:
-            sorted_buckets.extend(sorted(bucket))
+            partitions[num_samples].append(num)
 
-    return sorted_buckets
+    # Step 4: Sort each partition individually
+    sorted_partitions = []
+    for part in partitions:
+        insertion_sort(part)
+        sorted_partitions.extend(part)
+
+    return sorted_partitions
 
 
-A = np.random.randint(0, 10000, size=10000)
-n = 10
-k = 5
-threshold = 10000
+# Example usage:
+arr = np.random.randint(0, 10000, size=10)
+print("Original array:", arr)
 
-print("Original array:", A)
 start_time = time.time()  # Record start time
-sorted_A = sample_sort(A,n,k, threshold)
+sorted_arr = sample_sort(arr)
 end_time = time.time()  # Record end time
 print("Time taken for sorting:", end_time - start_time, "seconds")
-print("Sorted array:", sorted_A)
 
+#print("Sorted array:", sorted_arr)
