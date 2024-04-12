@@ -6,6 +6,10 @@ Táto vetva obsahuje zdrojové kódy ku zadaniu 5 z PPDS. Zadanie je vyvíjané 
 
 Tento kód implementuje algoritmus nazvaný "*sample sort*" na triedenie polí. Ide o algoritmus, ktorý je podobný quicksortu. Ide o sériové riešenie tohto problému.
 
+Generovanie arrayov (aj pre cudu):
+
+![](/img/generovanie.png)
+
 Výstup pre malý vstup (array size 10):
 
 ![](/img/vystup_serial_maly_vstup.png)
