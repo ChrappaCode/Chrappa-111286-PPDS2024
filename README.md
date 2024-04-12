@@ -63,3 +63,5 @@ Bohužial výsledky pre CUDA riešenie nie sú ideálne práve aj kvôli tomu, �
 *[ChatGPT](https://chat.openai.com/)*
 
 *[Numba Cuda Introduction](https://nyu-cds.github.io/python-numba/05-cuda/)*
+
+*[Wikipedia](https://en.wikipedia.org/wiki/Samplesort)*
