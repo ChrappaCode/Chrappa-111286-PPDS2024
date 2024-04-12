@@ -1,52 +1,60 @@
+import random
 import time
 import numpy as np
 
-def merge(left, right):
-    result = []
-    left_index, right_index = 0, 0
-
-    while left_index < len(left) and right_index < len(right):
-        if left[left_index] < right[right_index]:
-            result.append(left[left_index])
-            left_index += 1
-        else:
-            result.append(right[right_index])
-            right_index += 1
-
-    result.extend(left[left_index:])
-    result.extend(right[right_index:])
-    return result
-
-def sample_sort_serialized(A, threshold):
+def sample_sort(A, k, p, threshold):
     n = len(A)
-    stack = [(0, n)]  # Initialize stack with the entire array as the initial subproblem
 
+    # If average bucket size is below the threshold, switch to another sorting algorithm
+    if n / k < threshold:
+        A.sort()  # Use another sorting algorithm, e.g., quicksort
+        return A
+
+    # Step 1: Select samples and sort them
+    if k >= n:
+        S = sorted(A)
+    else:
+        S = [random.sample(A, k) for _ in range(p)]  # Randomly select k samples for each set
+        S = [item for sublist in S for item in sublist]  # Flatten the list of samples
+        S.sort()  # Sort the samples
+
+    # Generate splitters
+    splitters = [float('-inf')] + [S[i * k] for i in range(1, p)] + [float('inf')]
+
+    # Step 2: Place elements in buckets
+    buckets = [[] for _ in range(p)]
+    for a in A:
+        for j in range(1, len(splitters)):
+            if splitters[j - 1] < a <= splitters[j]:
+                buckets[j - 1].append(a)
+                break
+
+    # Step 3 and concatenation using a stack
+    stack = [(bucket, k, p, threshold) for bucket in buckets]
+    sorted_buckets = []
     while stack:
-        start, end = stack.pop()  # Pop the subproblem from the stack
-        if end - start <= threshold:  # If subproblem size is less than or equal to threshold, sort it
-            A[start:end] = sorted(A[start:end])
-        else:  # Otherwise, push subproblems onto the stack
-            split_index = (start + end) // 2
+        bucket, k, p, threshold = stack.pop()
+        if len(bucket) > 1:
+            # Divide the bucket further
+            S = sample_sort(bucket, k, p, threshold)
+            sorted_buckets.extend(S)
+        else:
+            # Sort the bucket
+            sorted_buckets.extend(sorted(bucket))
 
-            stack.append((start, split_index))
-            stack.append((split_index, end))
+    return sorted_buckets
 
-    # Merge sorted subarrays
-    for i in range(2, n + 1):
-        for j in range(0, n, i * 2):
-            left = A[j:j + i // 2]
-            right = A[j + i // 2:j + i]
-            A[j:j + i] = merge(left, right)
 
-    return A
-
-# Test the implementation
+# Example usage
 A = np.random.randint(0, 10000, size=10000)
-threshold = 10
+n = 10
+k = 5
+threshold = 10000  # Set threshold to a smaller value
 
 print("Original array:", A)
 start_time = time.time()  # Record start time
-sorted_A = sample_sort_serialized(A, threshold)
+sorted_A = sample_sort(A,n,k, threshold)
 end_time = time.time()  # Record end time
 print("Time taken for sorting:", end_time - start_time, "seconds")
 print("Sorted array:", sorted_A)
+
