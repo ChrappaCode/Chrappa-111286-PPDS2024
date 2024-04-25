@@ -1,0 +1,122 @@
+import queue
+
+
+class Color:
+    HEADER = '\033[95m'
+    OKBLUE = '\033[94m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
+    OKYELLOW = '\033[93m'
+
+
+class Planovac:
+    def __init__(self):
+        self.fronta = queue.Queue()
+
+    def add_job(self, it):
+        """
+        Pridá "job" do fronty
+        :param it - generátoroví iterátor
+        """
+        self.fronta.put(it)
+
+    def start(self):
+        """
+        Spustí plánovač so všetkými podprogrammi, ktoré sú vo fronte
+        Plánovač ide stále dokola pokiaľ sú vo fronte podprogrami
+        """
+        while not self.fronta.empty():
+            it = self.fronta.get()
+            try:
+                next(it)
+                it.send(1)  # Pošle "1"
+                self.add_job(it)  # Dá iterátor späť do fronty
+            except StopIteration:
+                print(Color.FAIL + f"{it} skončil svoju pracovnú činnosť :)" + Color.ENDC)
+                it.close()
+            except Exception as e:
+                print("Coroutine raised an exception:", e)
+
+
+def is_prime(n):
+    """
+    Funckia na zistenie prvočísla
+    """
+    if n <= 1:
+        return False
+    if n <= 3:
+        return True
+    if n % 2 == 0 or n % 3 == 0:
+        return False
+    i = 5
+    while i * i <= n:
+        if n % i == 0 or n % (i + 2) == 0:
+            return False
+        i += 6
+    return True
+
+
+def podprogram_1():
+    """
+    Prvý podprogram, ktorý prijíma a vypisuje správu
+    Činnosť vykoná 200 krát
+    """
+    n = 0
+    try:
+        while n < 200:
+            n += 1
+            msg = yield
+            print(Color.OKBLUE + f"Podprogram 1, prijal správu: {msg}" + Color.ENDC)
+            yield
+    except GeneratorExit:
+        print("Generator")
+
+
+def podprogram_2():
+    """
+    Druhý podprogram, ktorý vypisuje prvočísla do 300
+    """
+    n = 0
+    while n < 300:
+        n += 1
+        yield
+        if is_prime(n):
+            print(Color.OKGREEN + f"Podprogram 2 vypisuje prvočísla do 300: {n}" + Color.ENDC)
+        else:
+            print(Color.OKGREEN + "Podprogram 2 nerobí nič" + Color.ENDC)
+        yield
+
+
+def podprogram_3():
+    """
+    Tretí podprogram, ktorý vypisuje párne čísla do 1000
+    """
+    n = 0
+    while n < 1000:
+        n += 1
+        yield
+        if not (n % 2):
+            print(Color.OKYELLOW + f"Podprogram 3 vypisuje párne čísla do tisíc: {n}" + Color.ENDC)
+        else:
+            print(Color.OKYELLOW + "Podprogram 3 nerobí nič" + Color.ENDC)
+        yield
+
+
+if __name__ == '__main__':
+
+    planovac = Planovac()  # inicializácia plánovača
+
+    it1 = podprogram_1()
+    it2 = podprogram_2()
+    it3 = podprogram_3()
+
+    planovac.add_job(it1)
+    planovac.add_job(it2)
+    planovac.add_job(it3)
+
+    planovac.start()  # štart plánovača
+
