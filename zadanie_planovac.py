@@ -1,4 +1,5 @@
 import queue
+from random import randint
 
 class Color:
     HEADER = '\033[95m'
@@ -32,7 +33,7 @@ class Planovac:
             it = self.fronta.get()
             try:
                 next(it)
-                it.send(1)  # Pošle "1"
+                it.send(randint(1, 10))  # Pošle random 1 až 10
                 self.add_job(it)  # Dá iterátor späť do fronty
             except StopIteration:
                 print(Color.FAIL + f"{it} skončil svoju pracovnú činnosť :)" + Color.ENDC)
@@ -62,7 +63,8 @@ def is_prime(n):
 
 def podprogram_1():
     """
-    Prvý podprogram, ktorý prijíma a vypisuje správu
+    Prvý podprogram, ktorý prijíma a vypisuje správu (číslo),
+    ktorá je nepárna.
     Činnosť vykoná 200 krát
     """
     n = 0
@@ -70,7 +72,10 @@ def podprogram_1():
         while n < 200:
             n += 1
             msg = yield
-            print(Color.OKBLUE + f"Podprogram 1, prijal správu: {msg}" + Color.ENDC)
+            if msg % 2:
+                print(Color.OKBLUE + f"Podprogram 1 prijal nepárnu správu: {msg}" + Color.ENDC)
+            else:
+                print(Color.OKBLUE + f"Podprogram 1 nerobí nič (prijal párnu správu)" + Color.ENDC)
             yield
     except GeneratorExit:
         print("Generator")
@@ -87,7 +92,7 @@ def podprogram_2():
         if is_prime(n):
             print(Color.OKGREEN + f"Podprogram 2 vypisuje prvočísla do 300: {n}" + Color.ENDC)
         else:
-            print(Color.OKGREEN + "Podprogram 2 nerobí nič" + Color.ENDC)
+            print(Color.OKGREEN + "Podprogram 2 nerobí nič (n nie je prvočíslo)" + Color.ENDC)
         yield
 
 
@@ -102,7 +107,7 @@ def podprogram_3():
         if not (n % 2):
             print(Color.OKYELLOW + f"Podprogram 3 vypisuje párne čísla do tisíc: {n}" + Color.ENDC)
         else:
-            print(Color.OKYELLOW + "Podprogram 3 nerobí nič" + Color.ENDC)
+            print(Color.OKYELLOW + "Podprogram 3 nerobí nič (n nie je párne)" + Color.ENDC)
         yield
 
 
