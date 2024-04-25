@@ -1,6 +1,5 @@
 import queue
 
-
 class Color:
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'
@@ -45,6 +44,7 @@ class Planovac:
 def is_prime(n):
     """
     Funckia na zistenie prvočísla
+    :param n - číslo, ktoré testuje
     """
     if n <= 1:
         return False
