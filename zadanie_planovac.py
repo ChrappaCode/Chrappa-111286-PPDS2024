@@ -61,9 +61,9 @@ def is_prime(n):
     return True
 
 
-def podprogram_1():
+def koprogram_1():
     """
-    Prvý podprogram, ktorý prijíma a vypisuje správu (číslo),
+    Prvý koprogram, ktorý prijíma a vypisuje správu (číslo),
     ktorá je nepárna.
     Činnosť vykoná 200 krát
     """
@@ -81,9 +81,9 @@ def podprogram_1():
         print("Generator")
 
 
-def podprogram_2():
+def koprogram_2():
     """
-    Druhý podprogram, ktorý vypisuje prvočísla do 300
+    Druhý koprogram, ktorý vypisuje prvočísla do 300
     """
     n = 0
     while n < 300:
@@ -96,9 +96,9 @@ def podprogram_2():
         yield
 
 
-def podprogram_3():
+def koprogram_3():
     """
-    Tretí podprogram, ktorý vypisuje párne čísla do 1000
+    Tretí koprogram, ktorý vypisuje párne čísla do 1000
     """
     n = 0
     while n < 1000:
@@ -115,9 +115,9 @@ if __name__ == '__main__':
 
     planovac = Planovac()  # inicializácia plánovača
 
-    it1 = podprogram_1()
-    it2 = podprogram_2()
-    it3 = podprogram_3()
+    it1 = koprogram_1()
+    it2 = koprogram_2()
+    it3 = koprogram_3()
 
     planovac.add_job(it1)
     planovac.add_job(it2)
