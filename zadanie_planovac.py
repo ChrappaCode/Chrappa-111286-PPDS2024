@@ -78,7 +78,7 @@ def koprogram_1():
                 print(Color.OKBLUE + f"Podprogram 1 nerobí nič (prijal párnu správu)" + Color.ENDC)
             yield
     except GeneratorExit:
-        print("Generator")
+        print("Generator Exit")
 
 
 def koprogram_2():
@@ -86,14 +86,17 @@ def koprogram_2():
     Druhý koprogram, ktorý vypisuje prvočísla do 300
     """
     n = 0
-    while n < 300:
-        n += 1
-        yield
-        if is_prime(n):
-            print(Color.OKGREEN + f"Podprogram 2 vypisuje prvočísla do 300: {n}" + Color.ENDC)
-        else:
-            print(Color.OKGREEN + "Podprogram 2 nerobí nič (n nie je prvočíslo)" + Color.ENDC)
-        yield
+    try:
+        while n < 300:
+            n += 1
+            yield
+            if is_prime(n):
+                print(Color.OKGREEN + f"Podprogram 2 vypisuje prvočísla do 300: {n}" + Color.ENDC)
+            else:
+                print(Color.OKGREEN + "Podprogram 2 nerobí nič (n nie je prvočíslo)" + Color.ENDC)
+            yield
+    except GeneratorExit:
+        print("Generator Exit")
 
 
 def koprogram_3():
@@ -101,14 +104,17 @@ def koprogram_3():
     Tretí koprogram, ktorý vypisuje párne čísla do 1000
     """
     n = 0
-    while n < 1000:
-        n += 1
-        yield
-        if not (n % 2):
-            print(Color.OKYELLOW + f"Podprogram 3 vypisuje párne čísla do tisíc: {n}" + Color.ENDC)
-        else:
-            print(Color.OKYELLOW + "Podprogram 3 nerobí nič (n nie je párne)" + Color.ENDC)
-        yield
+    try:
+        while n < 1000:
+            n += 1
+            yield
+            if not (n % 2):
+                print(Color.OKYELLOW + f"Podprogram 3 vypisuje párne čísla do tisíc: {n}" + Color.ENDC)
+            else:
+                print(Color.OKYELLOW + "Podprogram 3 nerobí nič (n nie je párne)" + Color.ENDC)
+            yield
+    except GeneratorExit:
+        print("Generator Exit")
 
 
 if __name__ == '__main__':
