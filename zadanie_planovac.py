@@ -20,7 +20,7 @@ class Planovac:
     def add_job(self, it):
         """
         Pridá "job" do fronty
-        :param it - generátoroví iterátor
+        :param it: generátoroví iterátor
         """
         self.fronta.put(it)
 
@@ -45,7 +45,7 @@ class Planovac:
 def is_prime(n):
     """
     Funckia na zistenie prvočísla
-    :param n - číslo, ktoré testuje
+    :param n: číslo, ktoré testuje
     """
     if n <= 1:
         return False
