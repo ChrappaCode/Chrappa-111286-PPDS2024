@@ -62,7 +62,7 @@ def calculate_total_area_parallel(rectangles):
     return total_area
 
 if __name__ == '__main__':
-    file_path = "in-big.txt"
+    file_path = "inputs/in-big.txt"
 
     rectangles = []
 
