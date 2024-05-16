@@ -12,10 +12,9 @@ Paralelizácia je dosiahnutá hlavne prostredníctvom kernelu CUDA vo funkcii `u
 
 | **Vstup** | **Veľkosť blokov** | **Čas vykonávania** |**Výsledok**|
 |-------|----------------|-----------------|-------|
-| in-edges.txt  | todo           | todo            |68|
-| in-assignment.txt  | todo           | todo            |42|
-|in-big.txt|         |                     |3669213|
-|in-big.txt|||3669213|
+| in-edges.txt  | 64           | 0.0069             |68|
+| in-assignment.txt  | 128           | 0.0079            |42|
+|in-big.txt|      256   |   55.52              |3669213|
  
 ![](/img/vystup_cuda_mriemerný_vstup.png)
 
