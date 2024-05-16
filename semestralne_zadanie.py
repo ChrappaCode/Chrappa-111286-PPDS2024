@@ -43,18 +43,18 @@ def calculate_total_area_parallel(rectangles):
     width = max_x - min_x + 1
     height = max_y - min_y + 1
 
-    grid = np.zeros((width, height), dtype=np.int32)
+    grid = np.zeros((width, height), dtype=np.int64)
 
     # Copy data to the device
     rectangles_device = cuda.to_device(np.array(rectangles, dtype=np.int64))
     grid_device = cuda.to_device(grid)
 
-    # Set up grid and block dimensions
-    block_dim = 256
+    block_dim = 128
     grid_dim = (len(rectangles) + block_dim - 1) // block_dim
 
     # Launch the kernel to update the grid
     update_grid_kernel[grid_dim, block_dim](rectangles_device, grid_device, min_x, min_y)
+
     cuda.synchronize()
 
     # Sum up the values in the grid using parallel reduction
@@ -62,7 +62,7 @@ def calculate_total_area_parallel(rectangles):
     return total_area
 
 if __name__ == '__main__':
-    file_path = "inputs/in-big.txt"
+    file_path = "inputs/in-assignment.txt"
 
     rectangles = []
 
@@ -71,7 +71,7 @@ if __name__ == '__main__':
             rectangle = tuple(map(int, line.strip().split(',')))
             rectangles.append(rectangle)
 
-    print("rectangles =", rectangles)
+    #print("rectangles =", rectangles)
 
     start_time = time.time()
     total_area_parallel = calculate_total_area_parallel(rectangles)
@@ -81,4 +81,4 @@ if __name__ == '__main__':
           Color.OKGREEN + Color.BOLD + f"{total_area_parallel}" + Color.ENDC)
 
     execution_time = end_time - start_time
-    print("Execution time:", execution_time, "seconds")
+    print("Čas:", execution_time, "sekúnd")
