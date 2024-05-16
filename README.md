@@ -14,7 +14,7 @@ Paralelizácia je dosiahnutá hlavne prostredníctvom kernelu CUDA vo funkcii `u
 |-------|----------------|-----------------||
 | in-edges.txt  | todo           | todo            ||
 | in-assignment.txt  | todo           | todo            ||
-|in-big.txt||||
+|in-big.txt|         |               |           ||
 |in-big.txt||||
  
 ![](/img/vystup_cuda_mriemerný_vstup.png)
