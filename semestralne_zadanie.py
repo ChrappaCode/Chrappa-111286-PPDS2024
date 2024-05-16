@@ -6,7 +6,7 @@ __ID__ = "111286"
 from numba import cuda
 import numpy as np
 import time
-
+import matplotlib.pyplot as plt
 
 class Color:
     HEADER = '\033[95m'
@@ -89,7 +89,7 @@ def calculate_total_area_parallel(rectangles):
 
 
 if __name__ == '__main__':
-    file_path = "inputs/in-assignment.txt"
+    file_path = "inputs/in-edges.txt"
 
     rectangles_from_file = []
 
@@ -99,6 +99,22 @@ if __name__ == '__main__':
             rectangles_from_file.append(rectangle)
 
     #print("rectangles =", rectangles)
+
+    #execution_times = []  # List to store execution times
+    #for _ in range(5):  # Run the code 5 times
+    #    start_time = time.time()
+    #    total_area_parallel = calculate_total_area_parallel(rectangles_from_file)
+    #    end_time = time.time()
+    #    execution_time = end_time - start_time
+    #    execution_times.append(execution_time)
+
+    # Plotting
+    #plt.plot(range(1, 6), execution_times, marker='o', color="green")  # Plot execution times
+    #plt.xlabel('Iterácia')
+    #plt.ylabel('Čas (sekundy)')
+    #plt.title('Časový graf')
+    #plt.grid(True)
+    #plt.show()
 
     start_time = time.time()
     total_area_parallel = calculate_total_area_parallel(rectangles_from_file)
