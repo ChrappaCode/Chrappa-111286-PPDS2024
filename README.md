@@ -19,3 +19,5 @@ Paralelizácia je dosiahnutá hlavne prostredníctvom kernelu CUDA vo funkcii `u
 *[ChatGPT](https://chat.openai.com/)*
 
 *[Numba Cuda Introduction](https://nyu-cds.github.io/python-numba/05-cuda/)*
+
+*[Zadanie úlohy](https://elearn.elf.stuba.sk/moodle/pluginfile.php/77429/mod_resource/content/1/PPDS_2024_semestralne_zadanie-v2.pdf)*
