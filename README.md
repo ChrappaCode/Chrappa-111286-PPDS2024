@@ -7,6 +7,8 @@ Táto vetva obsahuje zdrojové kódy ku semestrálnemu zadaniu z PPDS. Zadanie j
 Tento kód implementuje *Úlohu 5 - Zber úrody pšenice na planéte SOL III*.
 
 Problémom úlohy je vytvorenie paralelného algoritmu pre výpočet obshahu viacerých obdĺžnikov (*vyzbieranej úrody na planéte SOL III*). Výpočet musí počítať s možným prekrývaním obdĺžnikov. Ak 2 (a viac) obdĺžnikov pokrýva rovnakú plochu program túto plochu započíta len jeden krát. Obdĺžníky sú inicializované v textovom súbore ako súradnice `x1, y1, x2, y2` kde `x1, y1` je ľavý dolný okraj obdĺžnika a `x2, y2` je pravý horný okraj obdĺžnika.
+
+Paralelizácia je dosiahnutá hlavne prostredníctvom kernelu CUDA vo funkcii `update_grid_kernel` a redukcie CUDA vo funkcii `sum_reduce`. Kernelová funkcia je vykonávaná paralelne viacerými vláknami na GPU, pričom každé vlákno spracúva jeden obdĺžnik. Redukčná operácia potom spája výsledky všetkých vlákien na výpočet celkovej plochy pokrytej obdĺžnikmi.
  
 ![](/img/vystup_cuda_mriemerný_vstup.png)
 
