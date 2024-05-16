@@ -24,19 +24,9 @@ Ukážka výstupu do konzoly:
 
 Časové grafy pre každý vstup:
 
-in-assignment.txt:
-
-Solarized dark             |  Solarized Ocean
-:-------------------------:|:-------------------------:
-![](/img/in_ass_graf.png)  |  ![](/img/in_edges_graf.png)
-
-in-edges.txt:
-
-![](/img/in_edges_graf.png)
-
-in-big.txt:
-
-![](/img/in_big_graf.png)
+in-assignment.txt:           |  in-edges.txt: |  in-big.txt:
+:-------------------------:|:-------------------------: | -
+![](/img/in_ass_graf.png)  |  ![](/img/in_edges_graf.png) | ![](/img/in_big_graf.png)
 
 
 ## Zdroje
