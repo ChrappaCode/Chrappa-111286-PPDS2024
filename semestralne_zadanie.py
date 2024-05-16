@@ -6,7 +6,7 @@ __ID__ = "111286"
 from numba import cuda
 import numpy as np
 import time
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 
 class Color:
     HEADER = '\033[95m'
