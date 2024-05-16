@@ -10,10 +10,10 @@ Problémom úlohy je vytvorenie paralelného algoritmu pre výpočet obshahu via
 
 Paralelizácia je dosiahnutá hlavne prostredníctvom kernelu CUDA vo funkcii `update_grid_kernel` a redukcie CUDA vo funkcii `sum_reduce`. Kernelová funkcia je vykonávaná paralelne viacerými vláknami na GPU, pričom každé vlákno spracúva jeden obdĺžnik. Redukčná operácia potom spája výsledky všetkých vlákien na výpočet celkovej plochy pokrytej obdĺžnikmi.
 
-|Name |Quantity|
+|Vstup |Čas|
 |-----|--------|
-|Apple|3       |
-|Egg  |12      |
+|todo  |todo |
+|todo  | todo    |
  
 ![](/img/vystup_cuda_mriemerný_vstup.png)
 
