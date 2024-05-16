@@ -17,8 +17,10 @@ Testovanie pre rôzne vstupy (čas vypočítaný na základe viacerých meraní)
 | in-edges.txt  | 64           | 0.0069             |68|
 | in-assignment.txt  | 128           | 0.0079            |42|
 |in-big.txt|      256   |   55.52              |3669213|
- 
-![](/img/vystup_cuda_mriemerný_vstup.png)
+
+Ukážka výstupu do konzoly:
+
+![](/img/vystup.png)
 
 ## Zdroje
 
