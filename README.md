@@ -26,7 +26,9 @@ Ukážka výstupu do konzoly:
 
 in-assignment.txt:
 
-![](/img/in_ass_graf.png) ![](/img/in_edges_graf.png) ![](/img/in_big_graf.png)
+Solarized dark             |  Solarized Ocean
+:-------------------------:|:-------------------------:
+![](/img/in_ass_graf.png)  |  ![](/img/in_edges_graf.png)
 
 in-edges.txt:
 
