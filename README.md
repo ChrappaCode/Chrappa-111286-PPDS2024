@@ -22,6 +22,21 @@ Ukážka výstupu do konzoly:
 
 ![](/img/vystup.png)
 
+Časové grafy pre každý vstup:
+
+in-assignment.txt:
+
+![](/img/in_ass_graf.png)
+
+in-edges.txt:
+
+![](/img/in-edges_graf.png)
+
+in-big.txt:
+
+![](/img/in_big_graf.png)
+
+
 ## Zdroje
 
 *[Markdown Guide](https://www.markdownguide.org)*
