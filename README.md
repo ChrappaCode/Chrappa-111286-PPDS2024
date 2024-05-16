@@ -12,7 +12,7 @@ Paralelizácia je dosiahnutá hlavne prostredníctvom kernelu CUDA vo funkcii `u
 
 Testovanie pre rôzne vstupy (čas vypočítaný na základe viacerých meraní):
 
-| **Vstup** | **Veľkosť blokov** | **Čas vykonávania** |**Výsledok**|
+| **Vstup** | **Veľkosť blokov** | **Čas vykonávania (v sekundách)** |**Výsledok**|
 |-------|----------------|-----------------|-------|
 | in-edges.txt  | 64           | 0.0069             |68|
 | in-assignment.txt  | 128           | 0.0079            |42|
