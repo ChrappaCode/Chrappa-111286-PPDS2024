@@ -30,7 +30,7 @@ in-assignment.txt:
 
 in-edges.txt:
 
-![](/img/in-edges_graf.png)
+![](/img/in_edges_graf.png)
 
 in-big.txt:
 
