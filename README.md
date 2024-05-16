@@ -26,7 +26,7 @@ Ukážka výstupu do konzoly:
 
 in-assignment.txt:
 
-![](/img/in_ass_graf.png)
+![](/img/in_ass_graf.png) ![](/img/in_edges_graf.png) ![](/img/in_big_graf.png)
 
 in-edges.txt:
 
