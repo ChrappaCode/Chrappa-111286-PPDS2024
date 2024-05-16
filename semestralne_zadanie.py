@@ -7,6 +7,7 @@ from numba import cuda
 import numpy as np
 import time
 
+
 class Color:
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'
@@ -21,6 +22,16 @@ class Color:
 
 @cuda.jit
 def update_grid_kernel(rectangles_to_process, grid, min_x, min_y):
+    """
+    Funckia kernelu CUDA
+    Tento kernelový kód je zodpovedný za označenie buniek mriežky,
+    ktoré pokrývajú každý obdĺžnik.
+    @param rectangles_to_process: Pole obdĺžnikov na spracovanie
+    @param grid: Mriežka na označenie
+    @param min_x: Minimálna súradnica x mriežky
+    @param min_y: Minimálna súradnica y mriežky
+    """
+
     idx = cuda.grid(1)
 
     if idx < rectangles_to_process.shape[0]:
@@ -30,11 +41,26 @@ def update_grid_kernel(rectangles_to_process, grid, min_x, min_y):
             for y in range(y1, y2):
                 grid[x - min_x, y - min_y] = 1
 
+
 @cuda.reduce
 def sum_reduce(a, b):
+    """
+    Operáciu redukcie na sčítanie hodnôt v poli
+    @param a: Prvý operand
+    @param b: Druhý operand
+    """
+
     return a + b
 
+
 def calculate_total_area_parallel(rectangles):
+    """
+    Táto funkcia inicializuje mriežku s nulami zodpovedajúcimi ohraničujúcemu obdĺžniku
+    Skopíruje dáta (obdĺžniky a mriežku) na GPU
+    Vráti celkovú plochu
+    @param rectangles: zoznam obdĺžnikov
+    """
+
     min_x = min(rectangles, key=lambda x: x[0])[0]
     min_y = min(rectangles, key=lambda x: x[1])[1]
     max_x = max(rectangles, key=lambda x: x[2])[2]
@@ -45,36 +71,37 @@ def calculate_total_area_parallel(rectangles):
 
     grid = np.zeros((width, height), dtype=np.int64)
 
-    # Copy data to the device
+    # Kopíruje dáta na device
     rectangles_device = cuda.to_device(np.array(rectangles, dtype=np.int64))
     grid_device = cuda.to_device(grid)
 
     block_dim = 128
     grid_dim = (len(rectangles) + block_dim - 1) // block_dim
 
-    # Launch the kernel to update the grid
+    # Spustí kernel na aktualizáciu mriežky
     update_grid_kernel[grid_dim, block_dim](rectangles_device, grid_device, min_x, min_y)
 
     cuda.synchronize()
 
-    # Sum up the values in the grid using parallel reduction
-    total_area = sum_reduce(grid_device.reshape(-1)).item()  # Reshape to 1D array for reduction
+    # Spočítaj hodnoty pomocou paralelnej redukcie
+    total_area = sum_reduce(grid_device.reshape(-1)).item()  # Zmeň na 1D pole pre redukciu
     return total_area
+
 
 if __name__ == '__main__':
     file_path = "inputs/in-assignment.txt"
 
-    rectangles = []
+    rectangles_from_file = []
 
     with open(file_path, "r") as file:
         for line in file:
             rectangle = tuple(map(int, line.strip().split(',')))
-            rectangles.append(rectangle)
+            rectangles_from_file.append(rectangle)
 
     #print("rectangles =", rectangles)
 
     start_time = time.time()
-    total_area_parallel = calculate_total_area_parallel(rectangles)
+    total_area_parallel = calculate_total_area_parallel(rectangles_from_file)
     end_time = time.time()
 
     print(Color.OKBLUE + "Tákúto plochu pšenice pokradli mimozemštania z planéty SOL III:" + Color.ENDC,
