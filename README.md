@@ -8,7 +8,9 @@ Tento kód implementuje *Úlohu 5 - Zber úrody pšenice na planéte SOL III*.
 
 Problémom úlohy je vytvorenie paralelného algoritmu pre výpočet obshahu viacerých obdĺžnikov (*vyzbieranej úrody na planéte SOL III*). Výpočet musí počítať s možným prekrývaním obdĺžnikov. Ak 2 (a viac) obdĺžnikov pokrýva rovnakú plochu program túto plochu započíta len jeden krát. Obdĺžníky sú inicializované v textovom súbore ako súradnice `x1, y1, x2, y2` kde `x1, y1` je ľavý dolný okraj obdĺžnika a `x2, y2` je pravý horný okraj obdĺžnika.
 
-Paralelizácia je dosiahnutá hlavne prostredníctvom kernelu CUDA vo funkcii `update_grid_kernel` a paralelnej redukcie CUDA vo funkcii `sum_reduce`. Kernelová funkcia je vykonávaná paralelne viacerými vláknami na GPU, pričom každé vlákno spracúva jeden obdĺžnik. Redukcia potom spája výsledky všetkých vlákien na výpočet celkovej plochy pokrytej obdĺžnikmi.
+Paralelizácia je dosiahnutá hlavne prostredníctvom kernelu CUDA vo funkcii `update_grid_kernel` a paralelnej redukcie CUDA vo funkcii `sum_reduce`. Kernelová funkcia je vykonávaná paralelne viacerými vláknami na GPU, pričom každé vlákno spracúva jeden obdĺDožnik. Redukcia potom spája výsledky všetkých vlákien na výpočet celkovej plochy pokrytej obdĺžnikmi.
+
+Doplnková trieda `Color` slúži len na krajšiu vizualizáciu výstupu. Riešenie obsahuje aj kus zakomentovaného kódu ktorý slúži na vykreslenie časových grafov pre viacero behov programu. Ostatné funkcie sú komentované aj priamo v kóde. Main funkcia ďalej len načíta vstupný súbor spustí časovač a zavolá funkciu, ktorá sa stará o riešenie problému, následne vypíše výsledky pre použivateľa.
 
 Testovanie pre rôzne vstupy (čas vypočítaný na základe viacerých meraní):
 
