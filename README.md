@@ -10,7 +10,7 @@ Problémom úlohy je vytvorenie paralelného algoritmu pre výpočet obshahu via
 
 Paralelizácia je dosiahnutá hlavne prostredníctvom kernelu CUDA vo funkcii `update_grid_kernel` a paralelnej redukcie CUDA vo funkcii `sum_reduce`. Kernelová funkcia je vykonávaná paralelne viacerými vláknami na GPU, pričom každé vlákno spracúva jeden obdĺDožnik. Redukcia potom spája výsledky všetkých vlákien na výpočet celkovej plochy pokrytej obdĺžnikmi.
 
-Doplnková trieda `Color` slúži len na krajšiu vizualizáciu výstupu. Riešenie obsahuje aj kus zakomentovaného kódu ktorý slúži na vykreslenie časových grafov pre viacero behov programu. Ostatné funkcie sú komentované aj priamo v kóde. Main funkcia ďalej len načíta vstupný súbor spustí časovač a zavolá funkciu, ktorá sa stará o riešenie problému, následne vypíše výsledky pre použivateľa.
+Doplnková trieda `Color` slúži len na krajšiu vizualizáciu výstupu. Riešenie obsahuje aj kus zakomentovaného kódu, ktorý slúži na vykreslenie časových grafov pre viacero behov programu. Ostatné funkcie sú komentované aj priamo v kóde. Main funkcia ďalej len načíta vstupný súbor spustí časovač a zavolá funkciu, ktorá sa stará o riešenie problému, následne vypíše výsledky pre použivateľa.
 
 Testovanie pre rôzne vstupy (čas vypočítaný na základe viacerých meraní):
 
