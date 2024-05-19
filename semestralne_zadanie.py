@@ -98,23 +98,22 @@ if __name__ == '__main__':
             rectangle = tuple(map(int, line.strip().split(',')))
             rectangles_from_file.append(rectangle)
 
-    #print("rectangles =", rectangles)
+    '''
+    execution_times = []  # List to store execution times
+    for _ in range(5):  # Run the code 5 times
+        start_time = time.time()
+        total_area_parallel = calculate_total_area_parallel(rectangles_from_file)
+        end_time = time.time()
+        execution_time = end_time - start_time
+        execution_times.append(execution_time)
 
-    #execution_times = []  # List to store execution times
-    #for _ in range(5):  # Run the code 5 times
-    #    start_time = time.time()
-    #    total_area_parallel = calculate_total_area_parallel(rectangles_from_file)
-    #    end_time = time.time()
-    #    execution_time = end_time - start_time
-    #    execution_times.append(execution_time)
-
-    # Plotting
-    #plt.plot(range(1, 6), execution_times, marker='o', color="green")  # Plot execution times
-    #plt.xlabel('Iterácia')
-    #plt.ylabel('Čas (sekundy)')
-    #plt.title('Časový graf')
-    #plt.grid(True)
-    #plt.show()
+    plt.plot(range(1, 6), execution_times, marker='o', color="green")  # Plot execution times
+    plt.xlabel('Iterácia')
+    plt.ylabel('Čas (sekundy)')
+    plt.title('Časový graf')
+    plt.grid(True)
+    plt.show()
+    '''
 
     start_time = time.time()
     total_area_parallel = calculate_total_area_parallel(rectangles_from_file)
