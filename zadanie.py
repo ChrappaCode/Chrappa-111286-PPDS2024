@@ -55,7 +55,8 @@ if __name__ == "__main__":
     # Zoznam URL adries súborov na stiahnutie
     urls = [
         'https://ploszek.com/ppds/2024-05.2.Paralelne_vypocty_2.pdf',
-        'https://ploszek.com/ppds/2024-08.cuda.pdf'
+        'https://ploszek.com/ppds/2024-08.cuda.pdf',
+        'https://ploszek.com/ppds/2024-06.Paralelne_vypocty_3.pdf'
     ]
     # Spusti hlavnú asynchrónnu funkciu
     asyncio.run(main(urls))
